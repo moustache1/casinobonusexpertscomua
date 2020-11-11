@@ -1,0 +1,36 @@
+.blog-post{
+    &-slider{
+        margin: 15px 0 40px;
+        & .affiliate__vertical{
+            margin: 0 7px 15px;
+        }
+        & .slick-dots
+        {
+            bottom: -29px;
+        }
+        .slick-dots li
+        {
+            width: 16px;
+            height: 16px;
+            margin: 0 40px;
+        }
+        .slick-dots li button
+        {
+            width: 16px;
+            height: 16px;
+        }
+        .slick-dots li button:before
+        {
+            width: 16px;
+            height: 16px;
+            color: $monoMiddle;
+            background-color: $monoMiddle;
+            border-radius: 50%;
+        }
+        .slick-dots li.slick-active button:before
+        {
+            color: $monoMiddle;
+            background-color: $secNormal;
+        }
+    }
+}

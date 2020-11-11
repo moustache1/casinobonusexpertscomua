@@ -1,0 +1,178 @@
+.grid-container-blog {
+    display: grid;
+    grid-template-columns: 270px 270px 270px 270px;
+    grid-template-rows: 252px 252px;
+    gap: 30px 30px;
+    grid-template-areas:
+      "main-blog main-blog blog1 blog2"
+      "main-blog main-blog blog3 blog4";
+}
+@media screen and (max-width: 1220px){
+.grid-container-blog {
+    display: grid;
+    grid-template-columns: 270px 270px;
+    grid-template-rows: 252px 252px;
+    gap: 30px 30px;
+    grid-template-areas:
+        "main-blog main-blog"
+        "main-blog main-blog"
+        "blog1 blog2"
+        "blog3 blog4";
+    }
+}
+@media screen and (max-width: 650px){
+    .grid-container-blog {
+        display: grid;
+        grid-template-columns: 270px 270px;
+        grid-template-rows: 252px 252px;
+        gap: 30px 30px;
+        grid-template-areas:
+            "main-blog"
+            "main-blog"
+            "blog1"
+            "blog2"
+            "blog3"
+            "blog4";
+        }
+    }
+  .blog1 { grid-area: blog1; }
+  .blog2 { grid-area: blog2; }
+  .blog3 { grid-area: blog3; }
+  .blog4 { grid-area: blog4; }
+  .main-blog { grid-area: main-blog; }
+
+  .main{
+    &-blog{
+        width: 570px;
+        height: 534px;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 16px rgba(41, 13, 98, 0.15);
+        border-radius: 8px;
+        @media screen and (max-width: 650px) {
+            width: 270px;
+        }
+    }
+    &-blog-img{
+        width: 100%;
+        height: 236px;
+        & img{
+            width: 100%;
+            height: 236px;
+        }
+    }
+    &-blog-wrapper{
+        padding: 11px 20px 20px 16px;
+    }
+    &-blog-info{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: $monoDark;
+        @include extra-small-text;
+        font-family: 'Montserrat-Bold', sans-serif;
+    }
+    &-blog-date{
+        text-transform: uppercase;
+    }
+    &-blog-dot{
+        margin: 0 5px;
+    }
+    &-blog-author a{
+        color: $secNormal;
+    }
+    &-blog-title{
+        font-family: 'Montserrat-Bold', sans-serif;
+        @include h5;
+        color: $monoDarkest;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        line-clamp: 2;
+        box-orient: vertical;
+    }
+    &-blog-descr{
+        font-family: 'Montserrat-Bold', sans-serif;
+        @include body-text;
+        color: $monoDarkest;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        line-clamp: 6;
+        box-orient: vertical;
+        & p{
+            margin: 15px 0;
+        }
+    }
+    &-blog-read{
+        margin-top: 45px;
+        text-align: right;
+    }
+  } 
+
+  .small{
+    &-blog{
+        width: 270px;
+        height: 252px;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 16px rgba(41, 13, 98, 0.15);
+        border-radius: 8px;
+    }
+    &-blog-img{
+        width: 270px;
+        height: 124px;
+        & img{
+            width: 100%;
+            height: 124px;
+        }
+    }
+    &-blog-wrapper{
+        padding: 11px 16px 16px;
+    }
+    &-blog-date{
+        text-transform: uppercase;
+        color: $monoDark;
+        @include extra-small-text;
+        font-family: 'Montserrat-Bold', sans-serif;
+    }
+    &-blog-title{
+        font-family: 'Montserrat-Bold', sans-serif;
+        @include h5;
+        color: $monoDarkest;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        line-clamp: 2;
+        box-orient: vertical;
+    }
+    &-blog-read{
+        margin-top: 25px;
+        text-align: right;
+    }
+  } 
+  
+  .blog {
+      margin-top: 100px;
+    & h2{
+        text-align: left;
+    }
+    & .btn-primary{
+        text-align: center;
+    }
+    @media screen and (max-width: 650px) {
+        .btn-primary a, .btn-primary span{
+            padding: 11px 45px 12px 45px;
+        }
+    }
+  }

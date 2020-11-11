@@ -1,0 +1,126 @@
+.post-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    @media only screen and (max-width: 1000px){
+        flex-direction: column;
+    }
+    &-left{
+        max-width: 870px;
+        width: 100%;
+        & .btn-main{
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        & .content_scroll{
+            overflow-y: hidden;
+            height: 100%;
+        }
+        & .main-text {
+            margin-bottom: 0;
+        }
+    }
+    &-right{
+        margin-left: 30px;
+        max-width: 270px;
+        width: 100%;
+        @media only screen and (max-width: 1000px){
+            margin-left: 0;
+        }
+    }
+}
+
+.games-info{
+    margin-top: 30px;
+    background-color: #F6F8FC;
+    border-radius: 8px;
+    text-align: center;
+    padding: 27px 20px 41px;
+    @media only screen and (max-width: 1000px){
+        margin-top: 0;
+    }
+    &-title{
+        font-family: 'Montserrat-Bold', sans-serif;
+        @include h5;
+    }
+    &-stars{
+        margin-top: 10px;
+    }
+    &-about{
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: left;
+    }
+    &-parameter{
+        max-width: 114px;
+        width: 100%;
+        color: $monoDarkest;
+        font-family: 'Montserrat-Regular', sans-serif;
+    }
+    &-value{
+        max-width: 100px;
+        width: 100%;
+        font-family: 'Montserrat-Bold', sans-serif;
+        font-weight: 900;
+        color: $secNormal;
+        margin-left: 20px;
+    }
+}
+
+.post{
+    & .games-block h3{
+        font-size: 24px;
+        line-height: 29px;
+        font-family: 'Montserrat-Bold', sans-serif;
+        font-weight: 900;
+        color: $monoDarkest;
+    }
+    & .games-block .btn-primary{
+        display: none;
+    }
+    & .games-wrapper{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        text-align: left;
+    }
+    & .game-card {
+        max-width: 270px;
+        width: 100%;
+        margin-left: 0;
+    }
+    & .container{
+        padding: 0;
+    }
+    & .game-card-image{
+        height: 135px;
+    }
+    & .game-card-name{
+        height: 80px;
+    }
+}
+
+.affiliate-horizontal.single-page{
+    margin-top: 0;
+}
+
+
+.frame {
+	max-width: 870px;
+	width: 100%;
+	margin: 30px 0;
+	&-adopt {
+		position: relative;
+		height: 0;
+		@include resp-ratio(870, 589);
+		iframe {
+			position: absolute;
+			@include wrapp;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+		}
+	}
+}

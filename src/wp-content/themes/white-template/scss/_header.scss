@@ -1,0 +1,83 @@
+.site-header{
+    background-color: $monoLight;
+}
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0 0;
+    @media screen and (max-width: 999px) {
+        align-items: flex-start;
+    }
+    &-wrapper{
+        @media only screen and (min-width: 1000px) {
+			display: block !important;
+			position: relative;
+			background-color: transparent;
+        }
+        @media screen and (max-width: 999px) {
+            display: none;
+        }
+    }
+    &-menu{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        @media screen and (max-width: 999px) {
+            flex-direction: column;
+        }
+        & nav > ul > li {
+            margin-right: 40px;
+            color: $monoDarkest;
+            @media screen and (max-width: 999px) {
+                margin-right: 0;
+                margin-top: 15px;
+            }
+            & a:hover{
+                color: $secNormal;
+                transition: .4s;
+            }
+        }
+        @media only screen and (max-width: 999px) {
+            width: 100%;
+            transform: translateY(-100%);
+            transition: all 1s;
+            &-active {
+                transform: none;
+            }
+        }
+    }
+    &-btn{
+        @media screen and (max-width: 999px) {
+            margin: 20px 0;
+        }
+        & a {
+            padding: 9px 53px 12px 51px;
+            background: linear-gradient(180deg, #41F3B3 0%, #25DA78 100%);
+            border-radius: 21.5px;
+            font-family: 'Montserrat-Bold', sans-serif;
+            font-weight: 900;
+            font-size: 12px;
+            line-height: 16px;
+            color: $monoDarkest;
+            cursor: pointer;
+            &:hover{
+                background: #41F3B3;
+            }
+            @media screen and (max-width: 360px) {
+                padding: 9px 34px 12px 35px;
+            }
+        }
+    } 
+}
+ul.nav-list-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @media screen and (max-width: 999px) {
+        flex-direction: column;
+    }
+}
+.header__nav-menu.header__nav-menu-active{
+    padding-top:  50px;
+}

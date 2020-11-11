@@ -1,0 +1,160 @@
+$mainNormal: #25DA78;
+$mainActive: #16AE6E;
+
+$secNormal: #796AE1;
+$secHover: #8CA5FF;
+
+$monoWhite: #FFFFFF;
+$monoLight: #F6F8FC;
+$monoMiddle: #DFE5EE;
+$monoDark: #8690A0;
+$monoDarkest: #192744;
+
+// faq
+$faqPadding: 18px;
+$faqItemArrowWidth: 12px;
+$faqItemArrowHeight: 6px;
+
+@mixin fonts($size: false, $lh: false, $color: false, $weight: false, $ls: false, $td: false) {
+    @if $size { font-size: $size; }
+    @if $lh { line-height: $lh; }
+    @if $color { color: $color; }
+    @if $weight { font-weight: $weight; }
+    @if $ls { letter-spacing: $ls}
+    @if $td {text-decoration: $td}
+}
+
+@mixin body-text {
+    @include fonts(14px, 18px, false, 500);
+    @media screen and (max-width: 768px) {
+        @include fonts(14px, 21px);
+    }
+}
+
+@mixin h1 {
+    @include fonts(48px, 59px, false, 900);
+    @media screen and (max-width: 768px) {
+        @include fonts(32px, 38px);
+    }
+}    
+
+@mixin h2 {
+    @include fonts(42px, 51px, false, 900);
+    @media screen and (max-width: 768px) {
+        @include fonts(24px, 28px);
+    }
+}    
+
+@mixin h3 {
+    @include fonts(32px, 38px, false, 900);
+    @media screen and (max-width: 768px) {
+        @include fonts(18px, 21px);
+    }
+}    
+
+@mixin h4 {
+    @include fonts(24px, 29px, false, 900);
+    @media screen and (max-width: 768px) {
+        @include fonts(16px, 150%);
+    }
+}
+
+@mixin h5 {
+    @include fonts(16px, 20px, false, 900);
+    @media screen and (max-width: 768px) {
+        @include fonts(14px, 21px);
+    }
+}    
+
+@mixin h6 {
+    @include fonts(16px, 140%, false, 900);
+    @media screen and (max-width: 768px) {
+        @include fonts(14px, 21px);
+    }
+}    
+
+@mixin small-text {
+    @include fonts(14px, 21px, false, 700);
+}
+
+@mixin extra-small-text {
+    @include fonts(12px, 21px, false, 900);
+}
+
+@mixin text-accent {
+    @include fonts(14px, 18px, false, 500);
+}
+
+// mixins
+
+@mixin push-auto {
+    margin: {
+     left: auto;
+     right: auto;
+    }
+}
+
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin wrapp($top: 0, $bottom: 0, $right: 0, $left: 0){
+    top: $top;
+    bottom: $bottom;
+    right: $right;
+    left: $left
+}
+
+@mixin flex-box($align-items: false, $justify-content: false, $direction: false) {
+    display: flex;
+    @if $align-items { align-items: $align-items; }
+    @if $justify-content { justify-content: $justify-content; }
+    @if $direction { flex-direction: $direction; }
+}
+
+@mixin resp-ratio($x,$y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+     &:before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
+     }
+    } @else {
+     padding-top: $padding;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    text-align: left;
+    color: #192744;
+    margin-bottom: 30px;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 15px;
+    }
+    &:not(:first-child) {
+        margin-top: 30px;
+        @media screen and (max-width: 768px) {
+            margin-top: 15px;
+        }
+    }
+}
+
+h1 {
+    @include h1;
+}
+h2 {
+    @include h2;
+}
+h3 {
+    @include h3;
+}
+h4 {
+    @include h4;
+}
+h5 {
+    @include h5;
+}

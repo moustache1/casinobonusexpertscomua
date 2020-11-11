@@ -1,0 +1,111 @@
+body {
+    background-color: #fff;
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-weight: 500;
+}
+a {
+    text-decoration: none;
+}
+p {
+    margin: 20px 0;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container {
+    max-width: 1214px;
+    margin: 0 auto;
+    padding: 0 22px 10px;
+    @media screen and (max-width: 1200px) {
+    width: 100%;
+    }
+}
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media screen and (max-width: 1182px) {
+    display: block;
+    }
+}
+.inner-container {
+    margin: 0 auto;
+}
+//Main style
+.game-picture-wrapper {
+    img {
+        width: 100%;
+    }
+}
+
+.btn-main a, .btn-main span {
+    padding: 9px 53px 12px 51px;
+    background: linear-gradient(180deg, #41F3B3 0%, #25DA78 100%);
+    border-radius: 21.5px;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 16px;
+    color: $monoDarkest;
+    cursor: pointer;
+    &:hover{
+        background: #41F3B3;
+    }
+}
+.btn-primary a, .btn-primary span {
+    padding: 11px 56px 12px 55px;
+    border-radius: 24px;
+    border: 3px solid #796AE1;
+    font-family: 'Montserrat-Bold', sans-serif;
+    @include extra-small-text;
+    color: $secNormal;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover{
+        background: #8CA5FF;
+        color: #FFFFFF;
+        border: 3px solid #8CA5FF;
+    }
+}
+a.nav-item-link{
+    font-family: 'Montserrat-Bold', sans-serif;
+    color: $monoDarkest;
+}
+
+.cookie{
+    background-color: #F6F8FC;
+    &__wrapper{
+        padding: 17px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 17px 1350x;
+        @media screen and (max-width: 962px) {
+            flex-direction: column;
+        }
+    }
+    &__text{
+        max-width: 770px;
+        font-family: 'Montserrat-Bold', sans-serif;
+        font-weight: 900;
+        color: $monoDarkest;
+        font-size: 11px;
+        line-height: 21px;
+        text-transform: uppercase;
+        @media screen and (max-width: 962px) {
+            text-align: center;
+        }
+        & a{
+            color: $secNormal;
+        }
+    }
+    & .btn-primary{
+        margin-top: 0;
+        @media screen and (max-width: 962px) {
+            margin-top: 20px;
+        }
+    }
+}

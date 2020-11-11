@@ -1,0 +1,99 @@
+.author__content{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 1020px) {
+        flex-direction: column;
+    }
+    &-img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: $secNormal;
+    }
+    &-about{
+        margin-left: 100px;
+        max-width: 668px;
+        width: 100%;
+        @media screen and (max-width: 1020px) {
+            text-align: center;
+            margin-top: 20px;
+            margin-left: 0;
+        }
+    }
+    &-name{
+        @include h2;
+        color: $monoDarkest;
+        font-family: 'Montserrat-Bold', sans-serif;
+    }
+    &-descr{
+        margin-top: 30px;
+        font-family: 'Montserrat-Regular', sans-serif;
+        color: $monoDarkest;
+        @include text-accent;
+    }
+}
+.author__blog{
+    margin-top: 30px;
+    &-grid-container {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 270px 270px 270px 270px;
+        grid-template-rows: 252px 252px 252px 252px;
+        gap: 30px 30px;
+        grid-template-areas:
+          "main-blog1 main-blog1 blog1 blog2"
+          "main-blog1 main-blog1 blog3 blog4"
+          "blog5 blog6 main-blog2 main-blog2"
+          "blog7 blog8 main-blog2 main-blog2";
+      }
+      .blog1 { grid-area: blog1; }
+      .blog2 { grid-area: blog2; }
+      .blog3 { grid-area: blog3; }
+      .blog4 { grid-area: blog4; }
+      .blog5 { grid-area: blog5; }
+      .blog6 { grid-area: blog6; }
+      .blog7 { grid-area: blog7; }
+      .blog8 { grid-area: blog8; }
+      .main-blog1 { grid-area: main-blog1; }
+      .main-blog2 { grid-area: main-blog2; }
+}
+@media screen and (max-width: 1220px){
+    .author__blog-grid-container {
+        display: grid;
+        grid-template-columns: 270px 270px;
+        grid-template-rows: 252px 252px;
+        gap: 30px 30px;
+        grid-template-areas:
+            "main-blog1 main-blog1"
+            "main-blog1 main-blog1"
+            "blog1 blog2"
+            "blog3 blog4"
+            "blog5 blog6"
+            "blog7 blog8"
+            "main-blog2 main-blog2"
+            "main-blog2 main-blog2";
+        }
+}
+@media screen and (max-width: 650px){
+    .author__blog-grid-container {
+        display: grid;
+        grid-template-columns: 270px 270px;
+        grid-template-rows: 252px 252px;
+        gap: 30px 30px;
+        grid-template-areas:
+            "main-blog1"
+            "main-blog1"
+            "blog1"
+            "blog2"
+            "blog3"
+            "blog4"
+            "blog5"
+            "blog6"
+            "blog7"
+            "blog8"
+            "main-blog2"
+            "main-blog2";
+        }
+}

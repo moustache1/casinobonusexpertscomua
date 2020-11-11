@@ -1,0 +1,33 @@
+@import 'reset';
+@import 'fonts';
+@import 'vars';
+@import 'global';
+@import 'burger';
+@import 'header';
+@import 'category';
+@import 'single';
+@import 'category-blog'; // на страница рубрики "блог"
+@import 'single-blog'; // записи из рубрики "блог"
+@import 'author'; //page author
+@import 'single-casino-review'; // страница категории казино ревью (вне дизайна)
+@import '404';
+@import 'footer';
+
+
+//blocks
+@import 'affiliate-item-vertical'; //front-page
+@import 'affiliate-vertical-block'; //front-page
+@import 'seo-text'; //front-page
+@import 'game-items'; //front-page
+@import 'content-scroll'; //front-page
+@import 'affiliate-horizontal-block'; //front-page
+@import 'affiliate-item-horizontal'; //front-page
+@import 'blog'; //front-page
+@import 'faq/init-faq'; //front-page
+@import 'author-block'; //front-page
+@import 'blog-post-slider'; // Слайдер
+
+
+
+@import 'slick-theme';
+@import 'slick';

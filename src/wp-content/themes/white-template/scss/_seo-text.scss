@@ -1,0 +1,84 @@
+.seo-text{
+    margin-top: 10%;
+    &__wrapper{
+        display: flex;
+        justify-content: flex-start;
+        @media screen and (max-width: 1127px){
+            flex-direction: column;
+            margin: 0 auto;
+        }
+        }
+        &__left{
+            max-width: 570px;
+            @media screen and (max-width: 1127px){
+                max-width: 1000px;
+            }
+        }
+        &__h2{
+            @include h2;
+            color: $monoDarkest;
+            font-family: 'Montserrat-Bold', sans-serif;
+            font-weight: 900;
+        }
+        &__text{
+            margin-top: 30px;
+            color: $monoDarkest;
+            font-family: 'Montserrat-Regular', sans-serif;
+            font-weight: 500;
+            & p{
+                padding: 15px 0;
+            }
+        }
+        &__btn{
+            margin-top: 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media screen and (max-width: 1127px){
+                margin-top: 5%;
+            }
+        }
+        &__line{
+            margin-top: 34px;
+            width: 250px;
+            height: 2px;
+            background-color: $monoLight;
+            @media screen and (max-width: 650px){
+                display: none;
+            }
+        }
+        &__right{
+            background-image: url(images/seo-text-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            & img{
+                max-width: 600px;
+                width: 100%;
+                height: auto;
+            }
+            @media screen and (max-width: 1127px){
+                margin-top: 30px;
+                text-align: center;
+            }
+        }
+}
+.seo-text.reverse{
+    margin-top: 5%;
+    & .seo-text__left{
+        @media screen and (max-width: 1127px){
+            margin-top: 5%;
+        }
+    }
+    & .seo-text__right{
+        order: -1;
+        background-image: url(images/seo-text-bg-reverse.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    & .seo-text__wrapper{
+        justify-content: space-between;
+    }
+    & .seo-text__line{
+        order: 1;
+    }
+}
