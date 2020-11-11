@@ -4,8 +4,8 @@
     grid-template-rows: 252px 252px;
     gap: 30px 30px;
     grid-template-areas:
-      "main-blog main-blog blog1 blog2"
-      "main-blog main-blog blog3 blog4";
+      "main-blog main-blog item item"
+      "main-blog main-blog item item";
 }
 @media screen and (max-width: 1220px){
 .grid-container-blog {
@@ -35,10 +35,6 @@
             "blog4";
         }
     }
-  .blog1 { grid-area: blog1; }
-  .blog2 { grid-area: blog2; }
-  .blog3 { grid-area: blog3; }
-  .blog4 { grid-area: blog4; }
   .main-blog { grid-area: main-blog; }
 
   .main{

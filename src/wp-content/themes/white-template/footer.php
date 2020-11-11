@@ -79,9 +79,6 @@
         <!--/noindex-->
         </footer>
     <?php wp_footer(); ?>
-
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/slick.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bundle.js"></script>
+<!--  -->
    </body>
 </html>

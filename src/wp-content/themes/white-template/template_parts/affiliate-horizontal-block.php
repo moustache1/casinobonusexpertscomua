@@ -1,20 +1,24 @@
 <div class="affiliate-horizontal single-page">
     <div class="container">
-        <h2>Top Casinos</h2>
+        <h2>Лучшие казино</h2>
         <div class="affiliate-horizontal-block">
-            <?php 
-                $posts = get_posts( array(
-                    'posts_per_page' => 5,
-                    'category'    => 10,
-                    'orderby'     => 'order',
-                    'order'       => 'DESC',
-                ));
-                if ($posts) : foreach ($posts as $post) : setup_postdata($post); ?>
 
-                <?php get_template_part( 'template_parts/affiliate-item-horizontal' ); ?>
+
+    <?php $horizontal_casino = $args; ?>
+        <?php  if($horizontal_casino) {
+            ?>
+                <?php 
+                $posts = $horizontal_casino;
+                if ($posts) : foreach ($posts as $key => $post) : setup_postdata($post); ?>
+                
+                    <?php get_template_part( 'template_parts/affiliate-item-horizontal', null, $key ); ?>
             
                 <?php wp_reset_postdata(); ?>
                 <?php endforeach; endif; ?>
+            <?php
+        } ?>
+
+
         </div>
         <!-- Подключение слайдера для мобильной версии(убираются горизонтальные блоки) -->
         <div class="affiliate-horizontal-block-mob-slider">

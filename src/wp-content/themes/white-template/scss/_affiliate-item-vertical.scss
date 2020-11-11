@@ -15,6 +15,14 @@
         border-top: none;
         cursor: pointer;
     }
+    & .slick-slide{
+        height: 440px;
+        width: 270px;
+        & .slick-current .slick-active{
+            height: 440px;
+            width: 270px;
+        }
+    }
     &-img img{
         border-radius: 8px;
     }
@@ -58,6 +66,7 @@
         font-weight: 900;
         @include small-text;
         margin-bottom: 18px;
+        height: 42px;
         & span{
             color: $secNormal;
         }
@@ -73,4 +82,8 @@
             color: $secHover;
         }
     }
+}
+.affiliate__vertical.slick-slide.slick-active{
+    height: 440px !important;
+    width: 270px !important;
 }

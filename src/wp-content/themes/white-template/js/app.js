@@ -1,4 +1,5 @@
-// import $ from 'jquery';
+import $ from 'jquery';
+import slick from 'slick-carousel';
 import faqSchemeGenerator from './modules/faqSchemeGenerator';
 // import './modules/autoreg.js';
 
@@ -87,15 +88,15 @@ $('.faq').on('click', function (e) {
         dots: true,
         infinite: false,
         speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        autoplay: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
         autoplaySpeed: 7000,
         responsive: [
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 3,
+              slidesToShow: 2,
               slidesToScroll: 1,
               infinite: true,
               dots: true
@@ -103,13 +104,6 @@ $('.faq').on('click', function (e) {
           },
           {
             breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-          },
-          {
-            breakpoint: 480,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1

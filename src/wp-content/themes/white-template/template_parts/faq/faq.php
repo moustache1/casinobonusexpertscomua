@@ -14,7 +14,7 @@ $rows = get_field('faq', $page_id);
 
 if( $rows ) { ?>
 <div class="faq-title">
-  <h2>F.A.Q</h2>
+  <h2>F.A.Q.</h2>
 </div>
 <section class="faq">
 

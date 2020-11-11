@@ -1,10 +1,10 @@
 <div class="affiliate__horizontal-item">
 <?php $casinoparameter = get_field('casino_parameter'); ?>
     <div class="affiliate__horizontal-number">
-        1
+        <?php echo $args + 1 ?>
     </div>
     <div class="affiliate__horizontal-img">
-        <img src="<?php echo $casinoparameter['casino_parameter_image']['url'] ?>" alt="<?php echo $casinoparameter['casino_parameter_image_alt']; ?>">
+        <img src="<?php echo $casinoparameter['casino_parameter_image']['url'] ?>" alt="<?php echo $casinoparameter['casino_parameter_image']['alt']; ?>">
     </div>
     <div class="affiliate__horizontal-about">
         <div class="affiliate__horizontal-rating">

@@ -1,10 +1,15 @@
 <?php get_header(); ?>
+<?php 
+$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+$author_id = $curauth->ID;
+$avatar = get_field('avatar', 'user_'.$author_id);
+?>
 
 <div class="author-block container">
 <?php if( function_exists('custom_breadcrumbs') ) custom_breadcrumbs(' > '); ?>
     <div class="author__content">
         <div class="author__content-img">
-            
+            <img src="<?php echo $avatar['url'] ?>" alt="<?php echo $avatar['alt'] ?>">
         </div>
         <div class="author__content-about">
             <div class="author__content-name">
@@ -22,42 +27,7 @@
             тут должна быть пагинация
         </div> -->
         <div class="author__blog-grid-container">
-            <div class="main-blog1">
-                <?php  get_template_part('template_parts/blog-big-card');?>
-            </div>
-            <div class="blog1">
-                <?php  get_template_part('template_parts/blog-small-card');?>
-            </div>
-
-            <div class="blog2">
-                <?php  get_template_part('template_parts/blog-small-card');?>
-            </div>
-
-            <div class="blog3">
-                <?php  get_template_part('template_parts/blog-small-card');?>
-            </div>            
-            
-            <div class="blog4">
-                <?php  get_template_part('template_parts/blog-small-card');?>
-            </div>
-
-            <div class="main-blog2">
-                <?php  get_template_part('template_parts/blog-big-card');?>
-            </div>
-
-            <div class="blog5">
-                <?php  get_template_part('template_parts/blog-small-card');?>
-            </div>
-
-            <div class="blog6">
-                <?php  get_template_part('template_parts/blog-small-card');?>
-            </div>
-
-            <div class="blog7">
-                <?php  get_template_part('template_parts/blog-small-card');?>
-            </div>            
-            
-            <div class="blog8">
+            <div class="blog">
                 <?php  get_template_part('template_parts/blog-small-card');?>
             </div>
         </div>

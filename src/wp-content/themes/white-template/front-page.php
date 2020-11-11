@@ -5,9 +5,12 @@
     <?php the_content(); ?>
     <?php endwhile; endif; ?>
 </article>
+
 <?php $front_games = get_field('front_games'); ?>
 <?php $vertical_casino = get_field('vertical_casino'); ?>
-<?php get_template_part( 'template_parts/affiliate-vertical-block', null, ['par' => 'hello'] ); ?>
+<?php $horizontal_casino = get_field('horizontal_casino'); ?>
+
+<?php get_template_part( 'template_parts/affiliate-vertical-block', null, $vertical_casino ); ?>
 
 <div class="seo-text">
     <div class="container">
@@ -59,7 +62,7 @@
 </div>
 
 
-<?php get_template_part( 'template_parts/affiliate-horizontal-block' ); ?>
+<?php get_template_part( 'template_parts/affiliate-horizontal-block', null, $vertical_casino ); ?>
 
 <div class="seo-text reverse">
     <div class="container">
@@ -87,15 +90,4 @@
 
 <?php get_footer(); ?>
 
-<div class="cookie">
-    <div class="container">
-        <div class="cookie__wrapper">
-            <div class="cookie__text">
-                Мы используем куки-файлы для того, чтобы улучшить работу и повысить эффективность сайта. <br> <a href="#">Больше информации по ссылке.</a>
-            </div>
-            <div class="btn-primary">
-                <a href="#">Хорошо, я не против</a>
-            </div>
-        </div>
-    </div>
-</div>
+

@@ -14,10 +14,21 @@
                             </div>
                         </div>
 
-                        <div class="item">
-                            <?php var_dump($args); ?>
-                                
-                        </div>
+                        
+                            <?php $vertical_casino = $args; ?>
+                            <?php  if($vertical_casino) {
+                                ?>
+                                    <?php 
+                                    $posts = $vertical_casino;
+                                    if ($posts) : foreach ($posts as $post) : setup_postdata($post); ?>
+                                    <div class="item">
+                                        <?php get_template_part( 'template_parts/affiliate-item-vertical' ); ?>
+                                    </div>
+                                    <?php wp_reset_postdata(); ?>
+                                    <?php endforeach; endif; ?>
+                                <?php
+                            } ?>
+                        
                     </div>
 
                     <!-- Подключение слайдера для мобильной версии (display none на грид сетку) -->

@@ -5,7 +5,17 @@ Template Name: Game Items Category
 ?>
 
 <?php get_header(); ?>
-
+<?php 
+        $args_pagi = array(
+            'show_all'     => false, // показаны все страницы участвующие в пагинации
+            'end_size'     => 1,     // количество страниц на концах
+            'mid_size'     => 1,     // количество страниц вокруг текущей
+            'prev_next'    => true,  // выводить ли боковые ссылки "предыдущая/следующая страница".
+            'prev_text'    => __('prev'),
+            'next_text'    => __('next'),
+        );
+        
+        ?>
 <div class="blog-block">
     <div class="container">
     <?php if( function_exists('custom_breadcrumbs') ) custom_breadcrumbs(' > '); ?>
@@ -18,28 +28,39 @@ Template Name: Game Items Category
             endif;?>
     <div class="for-h"></div>
 
-    <!-- <div class="pagination">
-        тут должна быть пагинация
-    </div> -->
+    <div class="pagination">
+        <?php the_posts_pagination($args_pagi); ?>
+    </div>
 
         <div class="blog-wrapper">
         <?php 
-        $posts = get_posts( array(
-            'numberposts' => 16,
-            'category'    => $cat_id,
-            'orderby'     => 'rand',
-            'order'       => 'DESC',
+        $posts = new WP_Query( array(
+            // 'posts_per_page' => 2,
+            'paged' => $paged,
+            'cat' => $cat_id,
+            'orderby' => 'date'
         ));
-        if ($posts) : foreach ($posts as $post) : setup_postdata($post); ?>
+        // var_dump($posts);
+        if ($posts) : while ($posts->have_posts()) : $posts->the_post(); ?>
         
         <?php  get_template_part('template_parts/blog-small-card');?>
 
-        <?php endforeach; endif; ?>
+    <?php endwhile; endif; ?>
         </div>
 
-    <!-- <div class="pagination">
-        тут должна быть пагинация
-    </div> -->
+    <div class="pagination">
+        <?php 
+        $args_pagi = array(
+            'show_all'     => false, // показаны все страницы участвующие в пагинации
+            'end_size'     => 1,     // количество страниц на концах
+            'mid_size'     => 1,     // количество страниц вокруг текущей
+            'prev_next'    => true,  // выводить ли боковые ссылки "предыдущая/следующая страница".
+            'prev_text'    => __('prev'),
+            'next_text'    => __('next'),
+        );
+        the_posts_pagination($args_pagi);
+        ?>
+    </div>
     
     </div>
 </div>
