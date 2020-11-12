@@ -6,6 +6,7 @@ import faqSchemeGenerator from './modules/faqSchemeGenerator';
 $(document).ready(function(){
     $('.post-content').prependTo($('.main-text'));
     $('.post-content h1').appendTo($('.for-h'));
+    $('.comments').appendTo($('.for-comments'));
 
     //menu toggle
     // $('#menu-toggle-but').click(function () {

@@ -13,8 +13,32 @@ Template Name: Casino Review Post
                     <div class="casino-review-stars">
                         <img src="<?php bloginfo("template_url"); ?>/images/icons_stars.png" alt="Stars">   
                     </div>
+<?php $average = ci_comment_rating_get_average_ratings( $post->ID); $stars = '';?>
+                    <?php
+                        for ( $i = 1; $i <= $average + 1; $i++ ) {
+
+                            $width = intval( $i - $average > 0 ? 20 - ( ( $i - $average ) * 20 ) : 20 );
+                   
+                           if ( 0 === $width ) {
+                               continue;
+                           }
+                   
+                               $stars .= '<span class="dashicons dashicons-star-filled dashicons-style" style="overflow:hidden; width:' . $width . 'px" class="dashicons dashicons-star-filled dashicons-style"></span>';
+                   
+                           if ( $i - $average > 0 ) {
+                               $stars .= '<span style="overflow:hidden; position:relative; left:-' . $width .'px;" class="dashicons dashicons-star-empty dashicons-style"></span>';
+                           }
+                       }
+                       echo $stars;
+                    ?>
+
                     <div class="casino-review-mark">
-                        (4.1) - Отлично
+                        
+                        <?php if ($average) {
+                            echo $average;
+                        } else {
+                            echo 'No reviews';
+                        } ?>
                     </div>
                 </div>
                 <div class="casino-review-img">
@@ -194,6 +218,73 @@ Template Name: Casino Review Post
     </article>
     
     <?php get_template_part('template_parts/author-block');?>
+
+ <div class="comments">
+    <?php 
+    $req = null;
+    $commenter = null;
+    $aria_req = null;
+    ?> 
+    <?php if (comments_open()) { ?>
+        <?php have_posts(); ?>
+            <?php if (get_comments_number() != 0) { ?>
+                <?php while (have_posts()) : the_post(); ?>
+            <?php comments_template(); ?> 
+            <?php
+                function my_comment($comment, $args, $depth){
+                $GLOBALS['comment'] = $comment; ?>
+                <li class="comment comment-li" id="li-comment-<?php comment_ID() ?>">
+                    <div id="comment-<?php comment_ID(); ?>">
+                    <div class="comment-author vcard">
+                        <div class="comment-meta commentmetadata">
+                        <span><?php echo(get_comment_date($c = 'Y-m-d'))  ?></span>
+                        </div>
+                        <?php printf(__('<span class="author">%s</span><span class="says">:</span>'), get_comment_author_link()) ?>
+                    </div>
+                    <span class="comment-title"> <?php echo get_comment_meta( $comment->comment_ID, 'title', true ) ?> </span>
+                    
+                    <?php if ($comment->comment_approved == '0') : ?>
+                        <em><?php _e('Ваш комментарий ожидает модерацию.') ?></em>
+                        <br>
+                    <?php endif; ?>
+                    <div class="comment-text"><?php comment_text() ?></div>
+                    <div class="reply">
+                        <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+                    </div>
+                    </div>
+            <?php }
+                $args = array(
+                'reply_text' => 'Ответить',
+                'callback' => 'my_comment'
+                );
+                wp_list_comments($args);
+            ?>
+            
+            <?php endwhile; ?>
+        <?php } ?>
+        <?php
+            $fields = array(
+                'author' => '<p class="comment-form-author"><label for="author">' . __( 'Name' ) . ($req ? '<span class="required">*</span>' : '') . '</label><input type="text" id="author" name="author" class="author" value="' . esc_attr($commenter['comment_author']) . '" placeholder=""  maxlength="30" autocomplete="on" tabindex="1" required' . $aria_req . '></p>',
+                'email'  => '<p class="comment-form-email">
+		<label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> 
+		<input id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $aria_req . $html_req  . ' />
+	</p>'
+            );
+            $args = array(
+                'comment_notes_after' => '',
+                'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" class="comment-form" cols="45" rows="8" aria-required="true" placeholder="Текст сообщения..."></textarea></p>',
+                'label_submit' => 'Отправить',
+                'fields' => apply_filters('comment_form_default_fields', $fields)
+            );
+
+            comment_form($args);
+        ?>
+        
+        <?php } else { ?>
+        <h3>Обсуждения закрыты для данной страницы</h3>
+        <?php }
+    ?>
+</div>   
     <?php get_template_part( 'template_parts/blog-post-slider' ); ?>
 
     <div class="casino-review-reviews">
@@ -324,7 +415,7 @@ Template Name: Casino Review Post
         </div>
     </div>
         
-        
+<div class="for-comments"></div>        
 
 
 

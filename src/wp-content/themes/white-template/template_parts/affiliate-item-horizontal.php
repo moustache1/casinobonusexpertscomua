@@ -30,8 +30,8 @@
             <span><?php echo $casinoparameter['casino_parameter_description']; ?></span>
         </div>
     </div>
-    <div class="btn-main">
-        <a href="#">Select a payout speed</a>
+    <div class="affiliate__horizontal-btn">
+        <div class="btn-main" data-link="Z28tcGxheQ==">Select a payout speed</div>
     </div>
 
 </div>
