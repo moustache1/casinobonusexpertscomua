@@ -45,7 +45,7 @@ p {
     }
 }
 
-.btn-main a, .btn-main span {
+.btn-main {
     padding: 9px 53px 12px 51px;
     background: linear-gradient(180deg, #41F3B3 0%, #25DA78 100%);
     border-radius: 21.5px;
@@ -59,7 +59,7 @@ p {
         background: #41F3B3;
     }
 }
-.btn-primary a, .btn-primary span {
+.btn-primary {
     padding: 11px 56px 12px 55px;
     border-radius: 24px;
     border: 3px solid #796AE1;

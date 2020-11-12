@@ -319,8 +319,8 @@ Template Name: Casino Review Post
                     data-error="Ваш комментарий"></textarea>
             </div>
         </div>
-        <div class="casino-review-reviews-form-btn">
-            <div class="btn-primary"><a href="#">Опубликовать отзыв</a></div>
+        <div class="casino-review-btn">
+            <a class="btn-primary" href="#">Опубликовать отзыв</a>
         </div>
     </div>
         

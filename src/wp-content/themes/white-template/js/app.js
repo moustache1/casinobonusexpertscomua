@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import slick from 'slick-carousel';
 import faqSchemeGenerator from './modules/faqSchemeGenerator';
-// import './modules/autoreg.js';
 
 // export for others scripts to use
 $(document).ready(function(){
@@ -77,7 +76,6 @@ $('.faq').on('click', function (e) {
 
     	// Autoreg
 	$('[data-link]').on('click', function () {
-		console.log('tap')
 		var link = $(this).data('link')
 		window.open('/' + atob(link))
     })

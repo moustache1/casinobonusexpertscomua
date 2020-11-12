@@ -58,7 +58,8 @@
     }
     &-btn{
         margin-top: 25px;
-        & .btn-main a{
+        text-align: right;
+        & .btn-main{
             padding: 9px 192px 12px 193px;
             @media screen and (max-width: 514px){
                 padding: 9px 95px 12px 95px;

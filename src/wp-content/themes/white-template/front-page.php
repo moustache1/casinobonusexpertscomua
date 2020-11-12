@@ -19,9 +19,9 @@
                 <?php the_field('text_block_1') ?>
                 <div class="seo-text__btn">
                     <div class="seo-text__line"></div>
-                    <div class="btn-primary">
-                        <a href="#">Открыть весь текст</a>
-                    </div>
+                    <div class="seo-text__button">
+                        <a class="btn-primary" data-link="Z28tcGxheQ==">Открыть весь текст</a>
+                    </div>  
                 </div>
             </div>
             <div class="seo-text__right">
@@ -45,7 +45,9 @@
             <?php endforeach; endif; ?>
             </div>
         
-            <div class="btn-primary"><span>Показать больше игр</span></div>
+            <div class="games-block-btn">
+                <a class="btn-primary" href="/category/slots">Показать больше игр</a>
+            </div>
     </div>
     <?php
 } ?>
@@ -62,7 +64,7 @@
 </div>
 
 
-<?php get_template_part( 'template_parts/affiliate-horizontal-block', null, $vertical_casino ); ?>
+<?php get_template_part( 'template_parts/affiliate-horizontal-block', null, $horizontal_casino ); ?>
 
 <div class="seo-text reverse">
     <div class="container">

@@ -24,7 +24,7 @@
         <span><?php echo $casinoparameter['casino_parameter_description']; ?></span>
     </div>
     <div class="btn-main">
-        <a href="#">Играть сейчас</a>
+        <div data-link="Z28tcGxheQ==">Играть сейчас</div>
     </div>
     <div class="affiliate__vertical-read">
         <a href="<?php the_permalink(); ?>">Read review ></a>

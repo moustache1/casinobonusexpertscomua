@@ -43,9 +43,9 @@
                         </div>
                         <?php get_template_part( 'template_parts/blog-post-slider' ); ?>
                     </div>
-                    <div class="btn-primary">
-                        <a href="#">Все онлайн казино</a>
-                    </div>
+                    <div class="affiliate-vertical-block-btn">
+                        <a class="btn-primary" href="/category/casino-review">Все онлайн казино</a>
+                    </div>  
                 </div>
             </div>
         </div>

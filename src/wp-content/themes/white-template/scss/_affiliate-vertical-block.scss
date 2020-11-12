@@ -10,6 +10,9 @@
 }
 .affiliate-vertical-block{
     padding-top: 56px;
+    &-btn{
+        margin-top: 60px;
+    }
 }
 .text-top, .affiliate-vertical-blocktext-top{
     @include extra-small-text;
@@ -71,10 +74,6 @@
 // .item4 { grid-area: item4; }
 // .item5 { grid-area: item5; }
 // .item6 { grid-area: item6; }
-
-.btn-primary{
-    margin-top: 60px;
-}
 .slick-prev,
 .slick-next{
     display: none;
