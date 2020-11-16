@@ -4,8 +4,8 @@
     grid-template-rows: 252px 252px;
     gap: 30px 30px;
     grid-template-areas:
-      "main-blog main-blog item item"
-      "main-blog main-blog item item";
+      "main-blog main-blog small-blog small-blog"
+      "main-blog main-blog small-blog small-blog";
 }
 @media screen and (max-width: 1220px){
 .grid-container-blog {
@@ -16,26 +16,19 @@
     grid-template-areas:
         "main-blog main-blog"
         "main-blog main-blog"
-        "blog1 blog2"
-        "blog3 blog4";
+        "small-blog small-blog"
+        "small-blog small-blog";
     }
 }
-@media screen and (max-width: 650px){
+@media screen and (max-width: 610px){
     .grid-container-blog {
-        display: grid;
-        grid-template-columns: 270px 270px;
-        grid-template-rows: 252px 252px;
-        gap: 30px 30px;
-        grid-template-areas:
-            "main-blog"
-            "main-blog"
-            "blog1"
-            "blog2"
-            "blog3"
-            "blog4";
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+}
   .main-blog { grid-area: main-blog; }
+//   .small-blog { grid-area: small-blog; }
 
   .main{
     &-blog{
@@ -44,7 +37,8 @@
         background: #FFFFFF;
         box-shadow: 0px 8px 16px rgba(41, 13, 98, 0.15);
         border-radius: 8px;
-        @media screen and (max-width: 650px) {
+        position: relative;
+        @media screen and (max-width: 610px){
             width: 270px;
         }
     }
@@ -108,8 +102,9 @@
         }
     }
     &-blog-read{
-        margin-top: 45px;
-        text-align: right;
+        position: absolute;
+        right: 21px;
+        bottom: 20px;
     }
   } 
 
@@ -120,6 +115,7 @@
         background: #FFFFFF;
         box-shadow: 0px 8px 16px rgba(41, 13, 98, 0.15);
         border-radius: 8px;
+        position: relative;
     }
     &-blog-img{
         width: 270px;
@@ -153,8 +149,9 @@
         box-orient: vertical;
     }
     &-blog-read{
-        margin-top: 25px;
-        text-align: right;
+        position: absolute;
+        right: 21px;
+        bottom: 20px;
     }
   } 
   
@@ -163,12 +160,18 @@
     & h2{
         text-align: left;
     }
-    & .btn-primary{
+    &-btn{
         text-align: center;
+        margin-top: 40px;
     }
     @media screen and (max-width: 650px) {
-        .btn-primary a, .btn-primary span{
+        a.btn-primary a, span.btn-primary{
             padding: 11px 45px 12px 45px;
-        }
+        }  
+    }
+    @media screen and (max-width: 350px) {
+        a.btn-primary{
+            padding: 11px 40px 12px 40px;
+        }  
     }
   }

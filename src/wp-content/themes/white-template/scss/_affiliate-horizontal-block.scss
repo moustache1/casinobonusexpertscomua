@@ -3,8 +3,9 @@
     & h2{
         text-align: left;
     }
-    & .btn-primary{
+    &-block-btn{
         text-align: center;
+        margin-top: 70px;
     }
     &-block{
         @media screen and (max-width: 1100px){

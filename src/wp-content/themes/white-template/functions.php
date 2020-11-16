@@ -157,37 +157,8 @@ function insert_random_game($content) {
   wp_reset_postdata();
   return $content;
 }
-// подключаем функцию активации мета блока (my_extra_fields) произвольных полей
-add_action('add_meta_boxes', 'my_extra_fields', 1);
-function my_extra_fields() {
-  add_meta_box('extra_fields', 'Дополнительные поля', 'extra_fields_box_func', 'post', 'normal', 'high');
-}
-// код блока
-function extra_fields_box_func($post) {
-  ?>
-<p><label><input type="text" name="extra[h1]" value="<?php echo get_post_meta($post->ID, 'h1', 1); ?>"
-      style="width:50%" /> h1 записи </label></p>
 
-<p>iframe (моб):
-  <textarea type="text" name="extra[mob_iframe]"
-    style="width:100%;height:50px;"><?php echo get_post_meta($post->ID, 'mob_iframe', 1); ?></textarea>
-</p>
-<p>iframe (десктоп):
-  <textarea type="text" name="extra[iframe]"
-    style="width:100%;height:50px;"><?php echo get_post_meta($post->ID, 'iframe', 1); ?></textarea>
-</p>
-<p>Если нет iframe игры, то сюда вписываем название скриншота игрушки, например так -
-  <b>aztec-gold-slot-game-screenshot.png</b>
-  <br>скриншот заранее загрузить через Медиафайлы:
-  <textarea type="text" name="extra[picture]"
-    style="width:100%;height:50px;"><?php echo get_post_meta($post->ID, 'picture', 1); ?></textarea>
-</p>
 
-<input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
-<?php
-}
-// включаем обновление полей при сохранении
-add_action('save_post', 'my_extra_fields_update', 0);
 /* Сохраняем данные, при сохранении поста */
 function my_extra_fields_update($post_id) {
   if (!wp_verify_nonce($_POST['extra_fields_nonce'], __FILE__)) {
@@ -712,16 +683,16 @@ wp_enqueue_style( 'dashicons' );
  function ci_comment_rating_styles() {  wp_enqueue_style( 'dashicons' ); wp_enqueue_style( 'ci-comment-rating-styles' ); } 
 //Create the rating interface. 
 add_action( 'comment_form_logged_in_after', 'ci_comment_rating_rating_field' ); add_action( 'comment_form_after_fields', 'ci_comment_rating_rating_field' ); function ci_comment_rating_rating_field () { ?>
-	<label class="label-for-rating" for="rating">Ваша оценка<span class="required">*</span></label>
+	<!-- <label class="label-for-rating" for="rating"> <span class="required"></span></label> -->
 	
-<fieldset class="comments-rating">
+<!-- <fieldset class="comments-rating">
 		<span class="rating-container">
-			<?php for ( $i = 5; $i >= 1; $i-- ) : ?>
-				<input type="radio" id="rating-<?php echo esc_attr( $i ); ?>" name="rating" value="<?php echo esc_attr( $i ); ?>" /><label class="label-for-rating" for="rating-<?php echo esc_attr( $i ); ?>"><?php echo esc_html( $i ); ?></label>
-			<?php endfor; ?>
+			<?php //for ( $i = 5; $i >= 1; $i-- ) : ?>
+				<input type="radio" id="rating-<?php //echo esc_attr( $i ); ?>" name="rating" value="<?php echo esc_attr( $i ); ?>" /><label class="label-for-rating" for="rating-<?php echo esc_attr( $i ); ?>"><?php echo esc_html( $i ); ?></label>
+			<?php //endfor; ?>
 			<input type="radio" id="rating-0" class="star-cb-clear" name="rating" value="0" /><label for="rating-0">0</label>
 		</span>
-	</fieldset>
+	</fieldset> -->
 
 	<?php
 }
@@ -734,13 +705,13 @@ function ci_comment_rating_save_comment_rating( $comment_id ) {
 	add_comment_meta( $comment_id, 'rating', $rating );
 }
 
-//Make the rating required.
-add_filter( 'preprocess_comment', 'ci_comment_rating_require_rating' );
-function ci_comment_rating_require_rating( $commentdata ) {
-	if ( ! isset( $_POST['rating'] ) || 0 === intval( $_POST['rating'] ) )
-	wp_die( __( 'Error: Вы не добавили рейтинг. Пожалуйста, вернитесь на страницу и оставьте свою оценку.' ) );
-	return $commentdata;
-}
+// //Make the rating required.
+// add_filter( 'preprocess_comment', 'ci_comment_rating_require_rating' );
+// function ci_comment_rating_require_rating( $commentdata ) {
+// 	if ( ! isset( $_POST['rating'] ) || 0 === intval( $_POST['rating'] ) )
+// 	wp_die( __( 'Error: Вы не добавили рейтинг. Пожалуйста, вернитесь на страницу и оставьте свою оценку.' ) );
+// 	return $commentdata;
+// }
 
 //Display the rating on a submitted comment.
 add_filter( 'comment_text', 'ci_comment_rating_display_rating');

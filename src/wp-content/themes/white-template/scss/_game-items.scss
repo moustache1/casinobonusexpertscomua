@@ -1,5 +1,17 @@
 .games-block {
 	margin-top: 10%;
+	&-top{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: 600px) {
+			flex-direction: column;
+			align-items: start;
+		}
+		& .for-h{
+			padding-top: 7px;
+		}
+	}
 	&-btn{
 		text-align: center;
 	}
@@ -133,5 +145,67 @@
 		width: 100%;
 		margin: 0 auto;
 		max-width: 200px;
+	}
+}
+
+
+
+.page-numbers{
+	color: $monoDarkest;
+	font-size: 16px;
+	line-height: 20px;
+	font-family: 'Montserrat-Bold', sans-serif;
+	font-weight: 900;
+	margin: 0 3px;
+	&.current{
+		color: $secNormal;
+	}
+}
+
+a.prev.page-numbers{
+	position: relative;
+	&:before{
+		position: absolute;
+		content: '';
+		top: -11px;
+		left: -50px;
+		width: 32px;
+		height: 32px;
+		background: url('images/arrow-prev.svg') no-repeat center;
+		border: 3px solid #796AE1;
+		border-radius: 16px;
+	}
+}
+a.next.page-numbers{
+	position: relative;
+	&:before{
+		position: absolute;
+		content: '';
+		top: -11px;
+		left: 12px;
+		width: 32px;
+		height: 32px;
+		background: url('images/arrow-prev.svg') no-repeat center;
+		border: 3px solid #796AE1;
+		border-radius: 16px;
+		transform: rotate(180deg);
+	}
+	&:hover:before{
+		cursor: pointer;
+	}
+}
+.pagination {
+	@media (max-width: 1300px) {
+		padding-right: 24px;
+	}
+	@media (max-width: 600px) {
+		padding-left: 24px;
+	}
+	&.right{
+		text-align: right;
+		@media (max-width: 600px) {
+			text-align: left;
+			padding-left: 24px;
+		}
 	}
 }

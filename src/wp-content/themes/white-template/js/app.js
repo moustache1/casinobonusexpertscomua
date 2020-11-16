@@ -21,7 +21,6 @@ $(document).ready(function(){
     //     $('.main-nav').slideToggle('slow')
     // })
 
-
     $('.burger').on('click', function () {
       $(this).toggleClass("burger_active");
       $(".header__nav-wrapper").fadeToggle("slow");

@@ -5,6 +5,17 @@ Template Name: Game Items Category
 ?>
 
 <?php get_header(); ?>
+<?php 
+        $args_pagi = array(
+            'show_all'     => false, // показаны все страницы участвующие в пагинации
+            'end_size'     => 1,     // количество страниц на концах
+            'mid_size'     => 1,     // количество страниц вокруг текущей
+            'prev_next'    => true,  // выводить ли боковые ссылки "предыдущая/следующая страница".
+            'prev_text'    => __(''),
+            'next_text'    => __(''),
+        );
+        
+        ?>
 
 <div class="game-items-cat games-block container">
 
@@ -18,37 +29,40 @@ Template Name: Game Items Category
             printf('%s', $term_description);
         endif;?>
     </article>
-        <?php //var_dump($cat_id);// ?>
+
     <div class="games-block-top">
         <div class="for-h"></div>
+
         <div class="pagination">
-            <!-- тут должна быть пагинация -->
+        <?php the_posts_pagination($args_pagi); ?>
         </div>
+
     </div>
 
     <div class="games-block">
-        <h2>СЕО Заголовок H2</h2>
             <div class="games-wrapper">
             <?php 
-            $posts = get_posts( array(
-                'numberposts' => 12,
-                'category'    => $cat_id,
-                'orderby'     => 'rand',
-                'order'       => 'DESC',
-            ));
-            if ($posts) : foreach ($posts as $post) : setup_postdata($post); ?>
+        $posts = new WP_Query( array(
+            // 'posts_per_page' => 2,
+            'paged' => $paged,
+            'cat' => $cat_id,
+            'orderby' => 'date'
+        ));
+        // var_dump($posts);
+        if ($posts) : while ($posts->have_posts()) : $posts->the_post(); ?>
 
-            <?php  get_template_part('template_parts/game-items');?>
+                <?php  get_template_part('template_parts/game-items');?>
         
-            <?php wp_reset_postdata(); ?>
-            <?php endforeach; endif; ?>
+                <?php endwhile; endif; ?>
             </div>
         
             <div class="btn-primary"><span>Показать больше игр</span></div>
     </div>
-    <div class="pagination">
-            <!-- тут должна быть пагинация -->
+
+    <div class="pagination right">
+        <?php the_posts_pagination($args_pagi); ?>
     </div>
+
 </div>
 
 <?php get_footer(); ?>

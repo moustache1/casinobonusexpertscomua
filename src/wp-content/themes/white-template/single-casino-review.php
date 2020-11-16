@@ -224,6 +224,8 @@ Template Name: Casino Review Post
     $req = null;
     $commenter = null;
     $aria_req = null;
+    $html5 = null;
+    $html_req = null;
     ?> 
     <?php if (comments_open()) { ?>
         <?php have_posts(); ?>
@@ -241,16 +243,12 @@ Template Name: Casino Review Post
                         </div>
                         <?php printf(__('<span class="author">%s</span><span class="says">:</span>'), get_comment_author_link()) ?>
                     </div>
-                    <span class="comment-title"> <?php echo get_comment_meta( $comment->comment_ID, 'title', true ) ?> </span>
                     
                     <?php if ($comment->comment_approved == '0') : ?>
                         <em><?php _e('Ваш комментарий ожидает модерацию.') ?></em>
                         <br>
                     <?php endif; ?>
                     <div class="comment-text"><?php comment_text() ?></div>
-                    <div class="reply">
-                        <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-                    </div>
                     </div>
             <?php }
                 $args = array(
@@ -292,72 +290,6 @@ Template Name: Casino Review Post
             Отзывы о казино:
         </div>
         <div class="casino-review-reviews-blocks">
-
-            <div class="casino-review-reviews-item">
-                <div class="casino-review-reviews-item-top">
-                    <div class="casino-review-reviews-item-name">
-                        Верблюдий Людий
-                    </div>
-                    <div class="casino-review-reviews-item-rating">
-                        <div class="casino-review-reviews-item-stars">
-                            <img src="<?php bloginfo("template_url"); ?>/images/icons_stars.png" alt="Stars">   
-                        </div>
-                        <div class="casino-review-reviews-item-mark">
-                            (4.1) - Отлично
-                        </div>
-                    </div>
-                </div>
-                <div class="casino-review-reviews-item-text">
-                    Those who like poker in Australia will find our resource useful as all the info that they might need is gathered in one place. Those who like poker in Australia will find our resource useful as all the info that they might need is gathered in one place.
-                </div>
-                <div class="casino-review-reviews-item-date">
-                    03.06.2020
-                </div>
-            </div>
-
-            <div class="casino-review-reviews-item">
-                <div class="casino-review-reviews-item-top">
-                    <div class="casino-review-reviews-item-name">
-                        Верблюдий Людий
-                    </div>
-                    <div class="casino-review-reviews-item-rating">
-                        <div class="casino-review-reviews-item-stars">
-                            <img src="<?php bloginfo("template_url"); ?>/images/icons_stars.png" alt="Stars">   
-                        </div>
-                        <div class="casino-review-reviews-item-mark">
-                            (4.1) - Отлично
-                        </div>
-                    </div>
-                </div>
-                <div class="casino-review-reviews-item-text">
-                    Those who like poker in Australia will find our resource useful as all the info that they might need is gathered in one place. Those who like poker in Australia will find our resource useful as all the info that they might need is gathered in one place.
-                </div>
-                <div class="casino-review-reviews-item-date">
-                    03.06.2020
-                </div>
-            </div>
-
-            <div class="casino-review-reviews-item">
-                <div class="casino-review-reviews-item-top">
-                    <div class="casino-review-reviews-item-name">
-                        Верблюдий Людий
-                    </div>
-                    <div class="casino-review-reviews-item-rating">
-                        <div class="casino-review-reviews-item-stars">
-                            <img src="<?php bloginfo("template_url"); ?>/images/icons_stars.png" alt="Stars">   
-                        </div>
-                        <div class="casino-review-reviews-item-mark">
-                            (4.1) - Отлично
-                        </div>
-                    </div>
-                </div>
-                <div class="casino-review-reviews-item-text">
-                    Those who like poker in Australia will find our resource useful as all the info that they might need is gathered in one place. Those who like poker in Australia will find our resource useful as all the info that they might need is gathered in one place.
-                </div>
-                <div class="casino-review-reviews-item-date">
-                    03.06.2020
-                </div>
-            </div>
 
             <div class="casino-review-reviews-item">
                 <div class="casino-review-reviews-item-top">

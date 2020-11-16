@@ -1,6 +1,6 @@
 <?php $cat = get_the_category(); 
 $cat_id = $cat['0']->term_id;
-var_dump($cat_id);  ?>
+//var_dump($cat_id);  ?>
 
 <div class="games-block">
   <div class="container">

@@ -27,7 +27,9 @@ if ($posts) {
        
         
         </div>
-<div class="btn-primary"> <a href="/category/blog">Перейти ко всем статьям</a></div>
+        <div class="blog-btn">
+            <a class="btn-primary" href="/category/blog">Перейти ко всем статьям</a>
+        </div> 
     </div>
 </div>
 <?php }
