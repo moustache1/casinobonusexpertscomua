@@ -61,18 +61,20 @@
         margin-top: 25px;
         text-align: right;
         & .btn-main{
-            padding: 9px 192px 12px 193px;
+            padding: 9px 185px 12px 191px;
             & a{
                 color: $monoDarkest;
             }
             @media screen and (max-width: 514px){
-                padding: 9px 95px 12px 95px;
+                padding: 9px 91px 12px 91px;
             }
         }
-    }
-    &-btn.review-block{
-        & .btn-main{
-            padding: 9px 100px 12px 100px;
+        &-main .btn-main{
+            margin-top: 25px;
+            padding: 9px 91px 12px 91px;
+            & a{
+                color: $monoDarkest;
+            }
         }
     }
     &-right{
@@ -393,23 +395,79 @@
     &-comment > label{
         display: none;
     }
-    // &-author > label{
-    //     display: none;
-    // }
-    // &-email > label{
-    //     display: none;
-    // }
+    &-author > label{
+        display: none;
+    }
+    &-email > label{
+        display: none;
+    }
 }
-.comment-form-comment > textarea{
-    max-width: 745px;
-    width: 100%;
+
+.comments{
+    display: flex;
+    flex-wrap: wrap;
+}
+.comment-li{
+    width: 570px;
+    height: 197px;
+    box-shadow: 0px 8px 16px rgba(41, 13, 98, 0.15);
+    border-radius: 8px;
+    padding: 25px 20px;
+    margin: 30px 0;
+    &:nth-child(even){
+        margin-left: 30px;
+    }
+}
+.comment-meta {
+    margin-top: 20px;
+    font-family: 'Montserrat-Bold' ,sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: $monoDark;
+    float: left;
+}
+.comment-author {
+    max-width: 169px;
+    font-family: 'Montserrat-Bold' ,sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: $monoDarkest;
+}
+.comments p {
+    text-align: justify;
+    max-width: 530px;
+    margin: 10px auto 0;
+    font-family: 'Montserrat-Regular' ,sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: $monoDarkest;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    line-clamp: 4;
+    box-orient: vertical;
+}
+.comment-respond p{
+    margin: 0;
+}
+p.comment-notes{
+    display: none;
+}
+textarea#comment.comment-form {
+    width: 570px;
     min-height: 159px;
     overflow: auto;
     outline: none;
     resize: none;
-    border: none;
+    border: 3px solid #DFE5EE;
     padding: 13px 0 13px 20px;
-    box-shadow: 0px 4px 4px rgba(41, 13, 98, 0.15);
     border-radius: 8px;
     font-size: 12px;
     line-height: 16px;
@@ -433,12 +491,11 @@
         color: transparent;
     }
 }
-.comment-form-comment > input{
-    max-width: 378px;
-    width: 100%;
-    border: none;
+
+input#author.author, input#email{
+    width: 378px;
+    border: 3px solid #DFE5EE;
     outline: none;
-    box-shadow: 4px 4px 8px rgba(41, 13, 98, 0.15);
     border-radius: 8px;
     padding: 13px 0 13px 20px;
     font-size: 12px;
@@ -466,4 +523,59 @@
     :focus:-ms-input-placeholder{
         color: transparent;
     }
+}
+input#submit.submit{
+    margin-top: 10px;
+    padding: 11px 55px 10px 55px;
+    border-radius: 24px;
+    border: 3px solid #796AE1;
+    font-family: 'Montserrat-Bold', sans-serif;
+    @include extra-small-text;
+    background-color: #fff;
+    color: $secNormal;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover{
+        background: #8CA5FF;
+        color: #FFFFFF;
+        border: 3px solid #8CA5FF;
+    }
+}
+p.comment-form-author{
+    margin: 0;
+    width: 100%;
+}
+.casino-review-post .author {
+    margin-bottom: 0;
+}
+
+.comments #submit {
+    background-color: #fff;
+    padding: 9px 55px 11px 55px;
+    border-radius: 24px;
+    border: 3px solid #796AE1;
+    font-family: 'Montserrat-Bold', sans-serif;
+    @include extra-small-text;
+    color: $secNormal;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover{
+        background: #8CA5FF;
+        color: #FFF;
+        border: 3px solid #8CA5FF;
+    }
+}
+.comments-rating{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.rating-text{
+    margin-right: 20px;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 16px;
+    color: $monoDark;
 }

@@ -13,7 +13,6 @@ if ($posts) {
         <div class="grid-container-blog">
 
         <?php 
-
             setup_postdata($posts[0]);
             $post = $posts[0];
             get_template_part('template_parts/blog-big-card');
@@ -25,7 +24,6 @@ if ($posts) {
                 }
             } ?>
        
-        
         </div>
         <div class="blog-btn">
             <a class="btn-primary" href="/category/blog">Перейти ко всем статьям</a>
@@ -33,4 +31,5 @@ if ($posts) {
     </div>
 </div>
 <?php }
-        ?>
+
+?>

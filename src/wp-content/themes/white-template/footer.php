@@ -1,4 +1,10 @@
-        <!--noindex-->
+<?php
+/*
+Template Name: Footer
+*/
+?>
+       
+       <!--noindex-->
         <?php $tags = get_tags();
         $html = '<div class="manufacturers-panel clearfix">';
         foreach ($tags as $tag) {
@@ -72,7 +78,7 @@
                     'items_wrap' => '<ul class="%2$s">%3$s</ul>') );?>
                 </div>
                 <div class="footer__copyright">
-                    All rights reserved © 2020 aussiepokiesclub.com
+                    All rights reserved © 2020 casinobonusexperts.com.ua
                 </div>
                 </div>
             </div>

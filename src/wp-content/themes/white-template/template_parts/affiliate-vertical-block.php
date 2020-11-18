@@ -7,7 +7,7 @@
                     <div class="grid-container">
                         <div class="text">
                             <div class="text-top">
-                                Добро пожаловать на <a href="#">OnlineSlots.com.ua</a>
+                                Добро пожаловать на <a href="#">casinobonusexperts.com.ua</a>
                             </div>
                             <div class="text-main">
                                 Только отборные казино и <a href="#">лучшие бонусы</a> для вас!

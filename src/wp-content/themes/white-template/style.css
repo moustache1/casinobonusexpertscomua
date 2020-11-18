@@ -14,10 +14,10 @@ button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,in
 .alignright{float:right;margin:5px 0 20px 20px}.alignleft{float:left;margin:5px 20px 20px 0}
 .aligncenter{display:block;margin:5px auto 5px auto}a img.alignright{float:right;margin:5px 0 20px 20px}
 a img.alignnone{margin:5px 20px 20px 0}a img.alignleft{float:left;margin:5px 20px 20px 0}
-a img.aligncenter{display:block;margin-left:auto;margin-right:auto}@font-face{font-family:Montserrat-Regular,sans-serif;src:url(fonts/Montserrat-Regular.woff2) format("woff2"),url(fonts/Montserrat-Regular.woff) format("woff"),url(fonts/Montserrat-Regular.ttf) format("truetype");font-weight:500;font-style:normal}
-@font-face{font-family:Montserrat-Bold,sans-serif;src:url(fonts/Montserrat-Bold.woff2) format("woff2"),url(fonts/Montserrat-Bold.woff) format("woff"),url(fonts/Montserrat-Bold.ttf) format("truetype");font-weight:900;font-style:normal}
-h1,h2,h3,h4,h5{text-align:left;color:#192744;margin-bottom:30px}@media screen and (max-width:768px){h1,h2,h3,h4,h5{margin-bottom:15px}
-}h1:not(:first-child),h2:not(:first-child),h3:not(:first-child),h4:not(:first-child),h5:not(:first-child){margin-top:30px}
+a img.aligncenter{display:block;margin-left:auto;margin-right:auto}@font-face{font-family:Montserrat-Regular;src:local("Montserrat Regular"),local("Montserrat-Regular"),url(fonts/Montserrat-Regular.woff) format("woff"),url(fonts/Montserrat-Regular.ttf) format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:Montserrat-Bold;src:local("Montserrat Bold"),local("Montserrat-Bold"),url(fonts/Montserrat-Bold.woff) format("woff"),url(fonts/Montserrat-Bold.ttf) format("truetype");font-weight:900;font-style:normal;font-display:swap}
+h1,h2,h3,h4,h5{text-align:left;color:#192744;margin-bottom:30px;font-family:Montserrat-Bold,sans-serif;font-weight:900}
+@media screen and (max-width:768px){h1,h2,h3,h4,h5{margin-bottom:15px}}h1:not(:first-child),h2:not(:first-child),h3:not(:first-child),h4:not(:first-child),h5:not(:first-child){margin-top:30px}
 @media screen and (max-width:768px){h1:not(:first-child),h2:not(:first-child),h3:not(:first-child),h4:not(:first-child),h5:not(:first-child){margin-top:15px}
 }h1{font-size:48px;line-height:59px;font-weight:900}@media screen and (max-width:768px){h1{font-size:32px;line-height:38px}
 }h2{font-size:42px;line-height:51px;font-weight:900}@media screen and (max-width:768px){h2{font-size:24px;line-height:28px}
@@ -25,12 +25,12 @@ h1,h2,h3,h4,h5{text-align:left;color:#192744;margin-bottom:30px}@media screen an
 }h4{font-size:24px;line-height:29px;font-weight:900}@media screen and (max-width:768px){h4{font-size:16px;line-height:150%}
 }h5{font-size:16px;line-height:20px;font-weight:900}@media screen and (max-width:768px){h5{font-size:14px;line-height:21px}
 }body{background-color:#fff;font-family:Montserrat-Regular,sans-serif;font-weight:500}
-a{text-decoration:none;color:#796ae1}a:hover{color:#6c5bd9}p{margin:20px 0}.center-block{display:block;margin-left:auto;margin-right:auto}
-.container{max-width:1214px;margin:0 auto;padding:0 22px 10px}@media screen and (max-width:1200px){.container{width:100%}
-}.main-content{display:flex;justify-content:space-between;align-items:flex-start}
+a{text-decoration:none;color:#796ae1}a:hover{color:#6c5bd9}p{margin:20px 0;text-align:justify}
+.center-block{display:block;margin-left:auto;margin-right:auto}.container{max-width:1214px;margin:0 auto;padding:0 22px 10px}
+@media screen and (max-width:1200px){.container{width:100%}}.main-content{display:flex;justify-content:space-between;align-items:flex-start}
 @media screen and (max-width:1182px){.main-content{display:block}}.inner-container{margin:0 auto}
 .game-picture-wrapper img{width:100%}.btn-main{padding:9px 53px 12px 51px;background:linear-gradient(180deg,#41f3b3 0,#25da78 100%);border-radius:21.5px;font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:12px;line-height:16px;color:#192744;cursor:pointer}
-.btn-main:hover{background:#41f3b3}.btn-primary{padding:11px 56px 12px 55px;border-radius:24px;border:3px solid #796ae1;font-family:Montserrat-Bold,sans-serif;font-size:12px;line-height:21px;font-weight:900;color:#796ae1;text-transform:uppercase;cursor:pointer}
+.btn-main:hover{background:#41f3b3}.btn-primary{padding:11px 55px 10px 55px;border-radius:24px;border:3px solid #796ae1;font-family:Montserrat-Bold,sans-serif;font-size:12px;line-height:21px;font-weight:900;color:#796ae1;text-transform:uppercase;cursor:pointer}
 .btn-primary:hover{background:#8ca5ff;color:#fff;border:3px solid #8ca5ff}a.nav-item-link{font-family:Montserrat-Bold,sans-serif;color:#192744}
 .cookie{background-color:#f6f8fc;position:fixed;bottom:0;width:100%}.cookie__wrapper{padding:17px 0;display:flex;justify-content:space-between;align-items:center;padding:17px 1350x}
 @media screen and (max-width:962px){.cookie__wrapper{flex-direction:column}}.cookie__text{max-width:770px;font-family:Montserrat-Bold,sans-serif;font-weight:900;color:#192744;font-size:11px;line-height:21px;text-transform:uppercase}
@@ -55,7 +55,7 @@ a{text-decoration:none;color:#796ae1}a:hover{color:#6c5bd9}p{margin:20px 0}.cent
 @media screen and (max-width:999px){.header__nav-menu nav>ul>li{margin-right:0;margin-top:15px}
 }.header__nav-menu nav>ul>li a:hover{color:#796ae1;transition:.4s}@media only screen and (max-width:999px){.header__nav-menu{width:100%;transform:translateY(-100%);transition:all 1s}
 .header__nav-menu-active{transform:none}}@media screen and (max-width:1000px){.header__nav-btn .btn-main{margin:15px 0}
-}@media screen and (max-width:360px){.header__nav-btn .btn-main{padding:9px 35px 12px 34px}
+}@media screen and (max-width:360px){.header__nav-btn .btn-main{padding:9px 30px 12px 30px}
 }ul.nav-list-wrapper{display:flex;justify-content:flex-end;align-items:center}@media screen and (max-width:999px){ul.nav-list-wrapper{flex-direction:column}
 }.header__nav-menu.header__nav-menu-active{padding-top:50px}.custom_breadcrumbs span{font-size:14px;line-height:18px;font-weight:500;color:#192744;font-family:Montserrat-Bold,sans-serif}
 @media screen and (max-width:768px){.custom_breadcrumbs span{font-size:14px;line-height:21px}
@@ -78,37 +78,62 @@ a{text-decoration:none;color:#796ae1}a:hover{color:#6c5bd9}p{margin:20px 0}.cent
 .post .game-card-image{height:135px}.post .game-card-name{height:80px}.affiliate-horizontal.single-page{margin-top:0}
 .blog-wrapper{display:flex;flex-wrap:wrap;margin:30px 0}@media(max-width:380px){.blog-wrapper{justify-content:center}
 }.blog-wrapper .small-blog{max-width:270px;margin:0 11px 15px 11px;position:relative;transition:.15s;box-shadow:0 8px 16px rgba(41,13,98,.15);border-radius:8px}
-.blog-post-block{display:flex;justify-content:flex-start}@media screen and (max-width:1000px){.blog-post-block{flex-direction:column}
+.pagination-block{display:flex;justify-content:space-between;align-items:center}.pagination-block h1{margin-bottom:0}
+@media(max-width:600px){.pagination-block h1{margin-bottom:30px}}@media(max-width:600px){.pagination-block{flex-direction:column;align-items:start}
+}.pagination{padding-right:24px}@media(max-width:600px){.pagination{padding-left:24px}
+}.pagination.right{text-align:right}@media(max-width:600px){.pagination.right{text-align:left;padding-left:24px}
+}.blog-post-block{display:flex;justify-content:flex-start}@media screen and (max-width:1000px){.blog-post-block{flex-direction:column}
 }.blog-post-block .blog-block-left{max-width:870px;width:100%;margin-right:30px}.blog-post-block .blog-block-about{display:flex;justify-content:flex-start;align-items:center;font-size:12px;line-height:21px;color:#8690a0}
 .blog-post-block .blog-block-dot{margin:0 5px}.blog-post-block .blog-block-author{color:#796ae1}
 .blog-post-block .content_scroll{overflow-y:hidden;height:100%}@media screen and (max-width:1000px){.blog-post-block .blog-block-right{display:flex;flex-wrap:wrap}
 }@media screen and (max-width:643px){.blog-post-block .blog-block-right{margin-left:0}
 }.blog-post-block .blog-block-right .small-blog{max-width:270px;margin:0 11px 15px 11px;position:relative;transition:.15s;box-shadow:0 8px 16px rgba(41,13,98,.15);border-radius:8px;margin:15px}
 .blog-post .author .container{padding:0}article img{width:100%;height:auto}.author__content{margin-top:70px;display:flex;justify-content:center;align-items:center}
-@media screen and (max-width:1020px){.author__content{flex-direction:column}}.author__content-img{width:200px;height:200px;border-radius:50%;background-color:#796ae1}
+@media screen and (max-width:1020px){.author__content{flex-direction:column}}.author__content-img img{width:200px;height:200px;border-radius:50%;object-fit:cover}
 .author__content-about{margin-left:100px;max-width:668px;width:100%}@media screen and (max-width:1020px){.author__content-about{text-align:center;margin-top:20px;margin-left:0}
 }.author__content-name{font-size:42px;line-height:51px;font-weight:900;color:#192744;font-family:Montserrat-Bold,sans-serif}
 @media screen and (max-width:768px){.author__content-name{font-size:24px;line-height:28px}
 }.author__content-descr{margin-top:30px;font-family:Montserrat-Regular,sans-serif;color:#192744;font-size:14px;line-height:18px;font-weight:500}
-.author__blog{margin-top:30px}.author__blog-grid-container{margin-top:30px;display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));grid-auto-rows:minmax(0,252px);grid-gap:30px}
-.author__blog .blog1{grid-area:blog1}.author__blog .blog2{grid-area:blog2}.author__blog .blog3{grid-area:blog3}
-.author__blog .blog4{grid-area:blog4}.author__blog .blog5{grid-area:blog5}.author__blog .blog6{grid-area:blog6}
-.author__blog .blog7{grid-area:blog7}.author__blog .blog8{grid-area:blog8}.author__blog .main-blog1{grid-area:main-blog1}
-.author__blog .main-blog2{grid-area:main-blog2}@media screen and (max-width:1220px){.author__blog-grid-container{display:grid;grid-template-columns:270px 270px;grid-template-rows:252px 252px;gap:30px 30px;grid-template-areas:"main-blog1 main-blog1" "main-blog1 main-blog1" "blog1 blog2" "blog3 blog4" "blog5 blog6" "blog7 blog8" "main-blog2 main-blog2" "main-blog2 main-blog2"}
-}@media screen and (max-width:650px){.author__blog-grid-container{display:grid;grid-template-columns:270px 270px;grid-template-rows:252px 252px;gap:30px 30px;grid-template-areas:"main-blog1" "main-blog1" "blog1" "blog2" "blog3" "blog4" "blog5" "blog6" "blog7" "blog8" "main-blog2" "main-blog2"}
-}.casino-review-post .container{padding:0}.casino-review-post .content{margin:0}.casino-review-post .content_scroll{overflow-y:hidden}
-.casino-review-post-single-post{max-width:770px}.casino-review-post .author{margin-bottom:60px}
-.casino-review-top-block{display:flex;justify-content:flex-start;width:100%;margin-top:30px}
+.author__blog{margin-top:30px}.author__blog-top{display:flex;justify-content:space-between;align-items:center}
+.author__blog-top h2{margin-bottom:0}.author__blog-container{margin:30px 0;display:flex;flex-wrap:wrap}
+.author__blog-container .blog{margin-top:0}.author__blog-container .small-blog{width:270px;margin:10px}
+.comments{font-size:16px}.comments p{text-align:justify}.comments li{list-style-type:none}
+.comments input,.comments optgroup,.comments select,.comments textarea{width:100%;margin-top:5px}
+.comments input{padding:2px 7px 7px}.comments textarea{padding:5px 10px}.comments label{font-size:16px}
+.comments #email-notes{display:none}.comments #submit{background:#796ae1;width:80%;max-width:270px;height:45px;display:block;font-size:20px;line-height:40px;border:0;margin:10px auto 0;padding:0}
+.comments #submit:hover{filter:brightness(120%)}.comment-notes{display:none}.comments-caption{text-align:center;font-size:22px;padding:20px 10px}
+.comment-li{padding:20px 0}.comment-li h3{text-align:center}.comment-author{font-size:18px;font-weight:700px}
+.comment-title{display:block;font-size:20px;font-weight:700;font-style:italic;color:#192744;margin:0 0 0 20px}
+.comment-form-title{width:49%;max-width:520px;float:right}@media screen and (max-width:700px){.comment-form-title{float:none;width:100%;max-width:100%}
+}.comment-form-author{width:49%;display:inline-block;max-width:300px}@media screen and (max-width:700px){.comment-form-author{float:none;width:100%;max-width:100%}
+}.comment-meta{float:right;color:grey;font-size:14px}@media screen and (max-width:500px){.comment-meta{float:none}
+}.comment-reply-link{color:gray}.comment-reply-link:hover{color:#000}.comment-reply-title{color:#000;text-align:center}
+#cancel-comment-reply-link{color:red}#cancel-comment-reply-link:hover{text-shadow:0 0 10px #ff4500}
+.comment-author{font-weight:700}.comments-rating{border:0;padding:0;margin-left:0}
+.comments-rating label{font-size:22px}.comments-rating label{display:inline-block}
+.rating-container{font-size:0;unicode-bidi:bidi-override;direction:rtl}.rating-container *{font-size:1.4rem}
+.rating-container>input{display:none}.rating-container>input+label{font-family:dashicons;display:inline-block;overflow:hidden;text-indent:9999px;width:1em;white-space:nowrap;cursor:pointer;margin:0}
+.rating-container>input+label:before{display:inline-block;text-indent:-9999px;content:"\f154";color:#888}
+.rating-container>input+label:hover:before,.rating-container>input+label:hover~label:before,.rating-container>input:checked~label:before{content:"\f155";color:#796ae1;text-shadow:0 0 1px #333}
+.rating-container>.star-cb-clear+label{text-indent:-9999px;width:.5em;margin-left:-.5em}
+.rating-container>.star-cb-clear+label:before{width:.5em}.rating-container:hover>input+label:before{content:"\f154";color:#888;text-shadow:none}
+.rating-container:hover>input+label:hover:before,.rating-container:hover>input+label:hover~label:before{content:"\f155";color:#796ae1;text-shadow:0 0 1px #333}
+.dashicons-style:before{color:#796ae1}.average-ratings{display:flex;align-items:center;flex-wrap:wrap}
+.average-ratings__text{margin-right:5px;font-weight:700;font-size:16px}.average-ratings .rating-count{width:100%;padding:10px 0 0 0}
+.label-for-rating{display:block}.casino-review-post .container{padding:0}.casino-review-post .content{margin:0}
+.casino-review-post .content_scroll{overflow-y:hidden}.casino-review-post-single-post{max-width:770px}
+.casino-review-post .author{margin-bottom:60px}.casino-review-top-block{display:flex;justify-content:flex-start;width:100%;margin-top:30px}
 @media screen and (max-width:900px){.casino-review-top-block{flex-direction:column;align-items:center}
 }.casino-review-left{max-width:470px}@media screen and (max-width:514px){.casino-review-left{text-align:center}
 }.casino-review-rating{display:flex;justify-content:flex-end;align-items:center}.casino-review-mark{margin-left:10px;color:#796ae1;font-family:Montserrat-Bold,sans-serif;font-size:16px;font-weight:900}
 .casino-review-img{margin-top:15px}.casino-review-img img{border-radius:8px;width:470px;height:236px}
 @media screen and (max-width:514px){.casino-review-img img{width:270px;height:auto}
-}.casino-review-btn{margin-top:25px;text-align:right}.casino-review-btn .btn-main{padding:9px 192px 12px 193px}
-.casino-review-btn .btn-main a{color:#192744}@media screen and (max-width:514px){.casino-review-btn .btn-main{padding:9px 95px 12px 95px}
-}.casino-review-btn.review-block .btn-main{padding:9px 100px 12px 100px}.casino-review-right{margin-left:30px}
-@media screen and (max-width:1000px){.casino-review-right{margin-left:15px}}@media screen and (max-width:900px){.casino-review-right{margin-left:0}
-}.casino-review-title{padding-top:25px}.casino-review-info{margin-top:30px;background-color:#f6f8fc;border-radius:8px;width:280px;padding:30px 20px}
+}.casino-review-btn{margin-top:25px;text-align:right}.casino-review-btn .btn-main{padding:9px 185px 12px 191px}
+.casino-review-btn .btn-main a{color:#192744}@media screen and (max-width:514px){.casino-review-btn .btn-main{padding:9px 91px 12px 91px}
+}.casino-review-btn-main .btn-main{margin-top:25px;padding:9px 91px 12px 91px}.casino-review-btn-main .btn-main a{color:#192744}
+.casino-review-right{margin-left:30px}@media screen and (max-width:1000px){.casino-review-right{margin-left:15px}
+}@media screen and (max-width:900px){.casino-review-right{margin-left:0}}.casino-review-title{padding-top:25px}
+.casino-review-info{margin-top:30px;background-color:#f6f8fc;border-radius:8px;width:280px;padding:30px 20px}
 .casino-review-info img.info-img{width:74px;height:46px;object-fit:cover}.casino-review-info-title{color:#192744;font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:16px;line-height:20px;max-width:230px}
 .casino-review-info-title .title-bonuses{color:#796ae1}.casino-review-info-about{margin-top:20px;display:flex;justify-content:flex-start;align-items:center;font-size:14px;line-height:18px;text-align:left}
 .casino-review-info-parameter{max-width:117px;width:100%;color:#192744;font-family:Montserrat-Regular,sans-serif}
@@ -156,17 +181,30 @@ a{text-decoration:none;color:#796ae1}a:hover{color:#6c5bd9}p{margin:20px 0}.cent
 .casino-review-reviews-form-btn{text-align:right}@media screen and (max-width:1038px){.casino-review-reviews-form-btn{text-align:left}
 }@media screen and (max-width:1240px){.casino-review-btn.review-block .btn-main a{padding:9px 96px 12px 96px}
 }.average-ratings{display:none !important}.comment-reply-title{display:none}.comment-form-comment>label{display:none}
-.comment-form-comment>textarea{max-width:745px;width:100%;min-height:159px;overflow:auto;outline:0;resize:none;border:0;padding:13px 0 13px 20px;box-shadow:0 4px 4px rgba(41,13,98,.15);border-radius:8px;font-size:12px;line-height:16px;color:#8690a0}
-@media screen and (max-width:1182px){.comment-form-comment>textarea{max-width:600px}
-}@media screen and (max-width:644px){.comment-form-comment>textarea{max-width:270px}
-}.comment-form-comment>textarea:focus::-webkit-input-placeholder{color:transparent}
-.comment-form-comment>textarea:focus:-moz-placeholder{color:transparent}.comment-form-comment>textarea:focus::-moz-placeholder{color:transparent}
-.comment-form-comment>textarea :focus:-ms-input-placeholder{color:transparent}.comment-form-comment>input{max-width:378px;width:100%;border:0;outline:0;box-shadow:4px 4px 8px rgba(41,13,98,.15);border-radius:8px;padding:13px 0 13px 20px;font-size:12px;line-height:16px;color:#8690a0}
-@media screen and (max-width:1038px){.comment-form-comment>input{max-width:600px}
-}@media screen and (max-width:644px){.comment-form-comment>input{max-width:270px;width:270px}
-}.comment-form-comment>input:nth-child(n+2){margin-top:20px}.comment-form-comment>input:focus::-webkit-input-placeholder{color:transparent}
-.comment-form-comment>input:focus:-moz-placeholder{color:transparent}.comment-form-comment>input:focus::-moz-placeholder{color:transparent}
-.comment-form-comment>input :focus:-ms-input-placeholder{color:transparent}.bg-404{font-weight:900;font-size:288px;line-height:351px;font-family:Montserrat-Bold,sans-serif;color:#dfe5ee;z-index:-1;margin-left:30%}
+.comment-form-author>label{display:none}.comment-form-email>label{display:none}.comments{display:flex;flex-wrap:wrap}
+.comment-li{width:570px;height:197px;box-shadow:0 8px 16px rgba(41,13,98,.15);border-radius:8px;padding:25px 20px;margin:30px 0}
+.comment-li:nth-child(even){margin-left:30px}.comment-meta{margin-top:20px;font-family:Montserrat-Bold,sans-serif;font-weight:700;font-size:12px;line-height:16px;color:#8690a0;float:left}
+.comment-author{max-width:169px;font-family:Montserrat-Bold,sans-serif;font-weight:700;font-size:16px;line-height:16px;color:#192744}
+.comments p{text-align:justify;max-width:530px;margin:10px auto 0;font-family:Montserrat-Regular,sans-serif;font-weight:500;font-size:14px;line-height:18px;color:#192744;overflow:hidden;text-overflow:ellipsis;display:-moz-box;-moz-box-orient:vertical;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;line-clamp:4;box-orient:vertical}
+.comment-respond p{margin:0}p.comment-notes{display:none}textarea#comment.comment-form{width:570px;min-height:159px;overflow:auto;outline:0;resize:none;border:3px solid #dfe5ee;padding:13px 0 13px 20px;border-radius:8px;font-size:12px;line-height:16px;color:#8690a0}
+@media screen and (max-width:1182px){textarea#comment.comment-form{max-width:600px}
+}@media screen and (max-width:644px){textarea#comment.comment-form{max-width:270px}
+}textarea#comment.comment-form:focus::-webkit-input-placeholder{color:transparent}
+textarea#comment.comment-form:focus:-moz-placeholder{color:transparent}textarea#comment.comment-form:focus::-moz-placeholder{color:transparent}
+textarea#comment.comment-form :focus:-ms-input-placeholder{color:transparent}input#author.author,input#email{width:378px;border:3px solid #dfe5ee;outline:0;border-radius:8px;padding:13px 0 13px 20px;font-size:12px;line-height:16px;color:#8690a0}
+@media screen and (max-width:1038px){input#author.author,input#email{max-width:600px}
+}@media screen and (max-width:644px){input#author.author,input#email{max-width:270px;width:270px}
+}input#author.author:nth-child(n+2),input#email:nth-child(n+2){margin-top:20px}input#author.author:focus::-webkit-input-placeholder,input#email:focus::-webkit-input-placeholder{color:transparent}
+input#author.author:focus:-moz-placeholder,input#email:focus:-moz-placeholder{color:transparent}
+input#author.author:focus::-moz-placeholder,input#email:focus::-moz-placeholder{color:transparent}
+input#author.author :focus:-ms-input-placeholder,input#email :focus:-ms-input-placeholder{color:transparent}
+input#submit.submit{margin-top:10px;padding:11px 55px 10px 55px;border-radius:24px;border:3px solid #796ae1;font-family:Montserrat-Bold,sans-serif;font-size:12px;line-height:21px;font-weight:900;background-color:#fff;color:#796ae1;text-transform:uppercase;cursor:pointer}
+input#submit.submit:hover{background:#8ca5ff;color:#fff;border:3px solid #8ca5ff}
+p.comment-form-author{margin:0;width:100%}.casino-review-post .author{margin-bottom:0}
+.comments #submit{background-color:#fff;padding:9px 55px 11px 55px;border-radius:24px;border:3px solid #796ae1;font-family:Montserrat-Bold,sans-serif;font-size:12px;line-height:21px;font-weight:900;color:#796ae1;text-transform:uppercase;cursor:pointer}
+.comments #submit:hover{background:#8ca5ff;color:#fff;border:3px solid #8ca5ff}.comments-rating{margin-top:20px;display:flex;justify-content:flex-start;align-items:center}
+.rating-text{margin-right:20px;font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:12px;line-height:16px;color:#8690a0}
+.bg-404{font-weight:900;font-size:288px;line-height:351px;font-family:Montserrat-Bold,sans-serif;color:#dfe5ee;z-index:-1;margin-left:30%}
 @media screen and (max-width:720px){.bg-404{margin-left:0}}@media screen and (max-width:520px){.bg-404{font-size:150px;line-height:200px;text-align:center}
 }.text-404{z-index:99;margin-top:-15%;margin-left:41%;max-width:670px;width:100%;text-align:left}
 @media screen and (max-width:1176px){.text-404{margin-left:20%}}@media screen and (max-width:852px){.text-404{margin-left:0}
@@ -206,33 +244,11 @@ a{text-decoration:none;color:#796ae1}a:hover{color:#6c5bd9}p{margin:20px 0}.cent
 .footer__social ul li a{position:relative;z-index:0;line-height:0}.footer__social ul li a::after{content:'';display:inline-block;position:absolute;top:50%;left:50%;width:32px;height:32px;transform:translate(-50%,-50%);z-index:-1}
 @media screen and (max-width:768px){.footer__social ul li a img{filter:invert(88%) sepia(51%) saturate(763%) hue-rotate(10deg) brightness(114%) contrast(104%)}
 }.footer__copyright{font-size:12px;line-height:21px;font-weight:900;color:#dfe5ee;font-family:Montserrat-Bold,sans-serif;text-align:center;padding-bottom:18px}
-.comments{font-size:16px}.comments p{text-align:justify}.comments li{list-style-type:none}
-.comments input,.comments optgroup,.comments select,.comments textarea{width:100%;margin-top:5px}
-.comments input{padding:2px 7px 7px}.comments textarea{padding:5px 10px}.comments label{font-size:16px}
-.comments #email-notes{display:none}.comments #submit{background:#796ae1;width:80%;max-width:270px;height:45px;display:block;font-size:20px;line-height:40px;border:0;margin:10px auto 0;padding:0}
-.comments #submit:hover{filter:brightness(120%)}.comment-notes{display:none}.comments-caption{text-align:center;font-size:22px;padding:20px 10px}
-.comment-li{padding:20px 0}.comment-li h3{text-align:center}.comment-author{font-size:18px;font-weight:700px}
-.comment-title{display:block;font-size:20px;font-weight:700;font-style:italic;color:#192744;margin:0 0 0 20px}
-.comment-form-title{width:49%;max-width:520px;float:right}@media screen and (max-width:700px){.comment-form-title{float:none;width:100%;max-width:100%}
-}.comment-form-author{width:49%;display:inline-block;max-width:300px}@media screen and (max-width:700px){.comment-form-author{float:none;width:100%;max-width:100%}
-}.comment-meta{float:right;color:grey;font-size:14px}@media screen and (max-width:500px){.comment-meta{float:none}
-}.comment-reply-link{color:gray}.comment-reply-link:hover{color:#000}.comment-reply-title{color:#000;text-align:center}
-#cancel-comment-reply-link{color:red}#cancel-comment-reply-link:hover{text-shadow:0 0 10px #ff4500}
-.comment-author{font-weight:700}.comments-rating{border:0;padding:0;margin-left:0}
-.comments-rating label{font-size:22px}.comments-rating label{display:inline-block}
-.rating-container{font-size:0;unicode-bidi:bidi-override;direction:rtl}.rating-container *{font-size:1.4rem}
-.rating-container>input{display:none}.rating-container>input+label{font-family:dashicons;display:inline-block;overflow:hidden;text-indent:9999px;width:1em;white-space:nowrap;cursor:pointer;margin:0}
-.rating-container>input+label:before{display:inline-block;text-indent:-9999px;content:"\f154";color:#888}
-.rating-container>input+label:hover:before,.rating-container>input+label:hover~label:before,.rating-container>input:checked~label:before{content:"\f155";color:#f5ae1b;text-shadow:0 0 1px #333}
-.rating-container>.star-cb-clear+label{text-indent:-9999px;width:.5em;margin-left:-.5em}
-.rating-container>.star-cb-clear+label:before{width:.5em}.rating-container:hover>input+label:before{content:"\f154";color:#888;text-shadow:none}
-.rating-container:hover>input+label:hover:before,.rating-container:hover>input+label:hover~label:before{content:"\f155";color:#f5ae1b;text-shadow:0 0 1px #333}
-.dashicons-style:before{color:#f5ae1b}.average-ratings{display:flex;align-items:center;flex-wrap:wrap}
-.average-ratings__text{margin-right:5px;font-weight:700;font-size:16px}.average-ratings .rating-count{width:100%;padding:10px 0 0 0}
-.label-for-rating{display:block}.affiliate__vertical{width:270px;height:440px;background:#fff;box-shadow:0 4px 4px 4px rgba(41,13,98,.15);border-radius:8px;display:flex;flex-direction:column;align-items:center;text-align:center;border-top:0}
+.affiliate__vertical{width:270px;height:440px;background:#fff;box-shadow:0 4px 4px 4px rgba(41,13,98,.15);border-radius:8px;display:flex;flex-direction:column;align-items:center;text-align:center;border-top:0}
 .affiliate__vertical:hover{border:3px solid #796ae1;border-top:0;cursor:pointer}.affiliate__vertical .slick-slide{height:440px;width:270px}
 .affiliate__vertical .slick-slide .slick-current .slick-active{height:440px;width:270px}
-.affiliate__vertical-img img{border-radius:8px}.affiliate__vertical-rating{display:flex;justify-content:space-around;align-items:center;width:100%;margin-top:10px}
+.affiliate__vertical-img img{border-radius:8px}.affiliate__vertical-stars{font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:14px;line-height:18px;color:#796ae1}
+.affiliate__vertical-rating{display:flex;justify-content:space-around;align-items:center;width:100%;margin-top:10px}
 .affiliate__vertical-mark{font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:12px;line-height:16px;color:#796ae1}
 .affiliate__vertical-title{margin-top:20px;font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:24px;line-height:29px;font-weight:900;color:#192744}
 @media screen and (max-width:768px){.affiliate__vertical-title{font-size:16px;line-height:150%}
@@ -264,13 +280,14 @@ a{text-decoration:none;color:#796ae1}a:hover{color:#6c5bd9}p{margin:20px 0}.cent
 @media screen and (max-width:650px){.seo-text__line{display:none}}.seo-text__right{background-image:url(images/seo-text-bg.png);background-repeat:no-repeat;background-size:cover}
 .seo-text__right img{max-width:600px;width:100%;height:auto}@media screen and (max-width:1127px){.seo-text__right{margin-top:30px;text-align:center}
 }.seo-text.reverse{margin-top:5%}@media screen and (max-width:1127px){.seo-text.reverse .seo-text__left{margin-top:5%}
-}.seo-text.reverse .seo-text__right{order:-1;background-image:url(images/seo-text-bg-reverse.png);background-repeat:no-repeat;background-size:cover}
+}.seo-text.reverse .seo-text__right{order:-1;position:relative}.seo-text.reverse .seo-text__right::before{position:absolute;top:0;left:0;background-image:url(images/seo-text-bg-reverse.png);background-repeat:no-repeat;background-size:cover}
 .seo-text.reverse .seo-text__wrapper{justify-content:space-between}.seo-text.reverse .seo-text__line{order:1}
 .games-block{margin-top:10%}.games-block-top{display:flex;justify-content:space-between;align-items:center}
 @media(max-width:600px){.games-block-top{flex-direction:column;align-items:start}
-}.games-block-top .for-h{padding-top:7px}.games-block-btn{text-align:center}.game-items-cat.games-block{margin-top:30px}
-.game-items-cat.games-block h1{margin-top:0}.games-wrapper{display:flex;flex-wrap:wrap;margin:30px 0}
-@media(max-width:380px){.games-wrapper{justify-content:center}}.game-card{overflow:hidden;width:14%;min-width:180px;margin:0 7px 18px 7px;position:relative;transition:.15s;box-shadow:0 8px 16px rgba(41,13,98,.15);border-radius:8px}
+}.games-block-top .for-h{padding-top:7px}.games-block-btn{text-align:center}.games-block-btn .btn-primary{padding:9px 54px 12px 54px}
+.game-items-cat.games-block{margin-top:30px}.game-items-cat.games-block h1{margin-top:0}
+.games-wrapper{display:flex;flex-wrap:wrap;margin:30px 0}@media(max-width:500px){.games-wrapper{flex-direction:column;align-items:center}
+}.game-card{overflow:hidden;width:14%;min-width:180px;margin:0 7px 18px 7px;position:relative;transition:.15s;box-shadow:0 8px 16px rgba(41,13,98,.15);border-radius:8px}
 @media(max-width:1024px){.game-card{width:19%}}@media(max-width:800px){.game-card{width:31.3%}
 }@media(max-width:700px){.game-card{width:33%}}@media(max-width:500px){.game-card{width:48%}
 }@media(max-width:380px){.game-card{width:100%;max-width:none}}.game-card-image{height:90px;overflow:hidden;display:flex}
@@ -299,7 +316,8 @@ a.next.page-numbers:hover:before{cursor:pointer}@media(max-width:1300px){.pagina
 .affiliate-horizontal-block-mob .affiliate__vertical:nth-child(n+2){margin-top:20px}
 }@media screen and (min-width:1101px){.affiliate-horizontal-block-mob-slider{display:none}
 }@media screen and (max-width:1100px){.affiliate-horizontal-block-mob-slider{display:block}
-}.affiliate__horizontal-item{width:100%;height:440px;height:100%;background:#fff;box-shadow:0 8px 16px rgba(41,13,98,.15);border-radius:8px;display:flex;flex-direction:flex-start;align-items:center;text-align:center}
+}.affiliate-horizontal-block-mob-item{display:flex;flex-direction:column;align-items:center}
+.affiliate__horizontal-item{width:100%;height:440px;height:100%;background:#fff;box-shadow:0 8px 16px rgba(41,13,98,.15);border-radius:8px;display:flex;flex-direction:flex-start;align-items:center;text-align:center}
 .affiliate__horizontal-item:nth-child(n+2){margin-top:18px}.affiliate__horizontal-item:hover{border:3px solid #796ae1;cursor:pointer;transition:.2s ease-in-out}
 .affiliate__horizontal-number{font-family:Montserrat-Bold,sans-serif;font-size:16px;line-height:20px;font-weight:900;width:6%}
 @media screen and (max-width:768px){.affiliate__horizontal-number{font-size:14px;line-height:21px}
@@ -346,7 +364,8 @@ a.next.page-numbers:hover:before{cursor:pointer}@media(max-width:1300px){.pagina
 }.author{margin-top:60px}.author__wrapper{display:flex;justify-content:space-between;align-items:center;max-width:1170px;width:100%}
 @media screen and (max-width:842px){.author__wrapper{flex-direction:column}}.author__block{width:950px;height:100px;background:#f6f8fc;border-radius:8px;display:flex;justify-content:flex-start;align-items:center;padding:18px 0 17px 40px}
 @media screen and (max-width:1212px){.author__block{max-width:600px}}@media screen and (max-width:648px){.author__block{flex-direction:column;text-align:center;max-width:276px;height:200px;padding-left:0}
-}.author__left-info{margin-left:20px}@media screen and (max-width:648px){.author__left-info{margin-left:0}
+}.author__left-img img{width:75px;height:75px;border-radius:50%;object-fit:cover}
+.author__left-info{margin-left:20px}@media screen and (max-width:648px){.author__left-info{margin-left:0}
 }.author__left-title{font-size:12px;line-height:21px;font-weight:900;font-family:Montserrat-Bold,sans-serif;color:#192744}
 .author__left-name{font-size:12px;line-height:21px;font-weight:900;font-family:Montserrat-Bold,sans-serif;color:#192744;text-transform:uppercase}
 .author__left-public{display:flex;justify-content:flex-start}@media screen and (max-width:648px){.author__left-public{justify-content:center}

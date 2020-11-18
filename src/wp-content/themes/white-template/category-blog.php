@@ -11,26 +11,29 @@ Template Name: Game Items Category
             'end_size'     => 1,     // количество страниц на концах
             'mid_size'     => 1,     // количество страниц вокруг текущей
             'prev_next'    => true,  // выводить ли боковые ссылки "предыдущая/следующая страница".
-            'prev_text'    => __('prev'),
-            'next_text'    => __('next'),
+            'prev_text'    => __(''),
+            'next_text'    => __(''),
         );
         
         ?>
 <div class="blog-block">
     <div class="container">
     <?php if( function_exists('custom_breadcrumbs') ) custom_breadcrumbs(' > '); ?>
-    <h1><?php $cat_id = get_query_var('cat');
+
+
+        <div class="pagination-block">
+        <h1><?php $cat_id = get_query_var('cat');
             $cat_data = get_option("category_$cat_id");
             if (!empty($cat_data['cat_h1'])) { echo $cat_data['cat_h1']; } ?></h1><?php 
             $term_description = term_description();
             if (!empty($term_description)) :
                 printf('%s', $term_description);
             endif;?>
-    <div class="for-h"></div>
 
-    <div class="pagination">
-        <?php the_posts_pagination($args_pagi); ?>
-    </div>
+            <div class="pagination">
+                <?php the_posts_pagination($args_pagi); ?>
+            </div>
+        </div>
 
         <div class="blog-wrapper">
         <?php 
@@ -48,15 +51,15 @@ Template Name: Game Items Category
     <?php endwhile; endif; ?>
         </div>
 
-    <div class="pagination">
+    <div class="pagination right">
         <?php 
         $args_pagi = array(
             'show_all'     => false, // показаны все страницы участвующие в пагинации
             'end_size'     => 1,     // количество страниц на концах
             'mid_size'     => 1,     // количество страниц вокруг текущей
             'prev_next'    => true,  // выводить ли боковые ссылки "предыдущая/следующая страница".
-            'prev_text'    => __('prev'),
-            'next_text'    => __('next'),
+            'prev_text'    => __(''),
+            'next_text'    => __(''),
         );
         the_posts_pagination($args_pagi);
         ?>

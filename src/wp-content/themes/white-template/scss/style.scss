@@ -9,13 +9,13 @@
 @import 'category-blog'; // на страница рубрики "блог"
 @import 'single-blog'; // записи из рубрики "блог"
 @import 'author'; //page author
+@import 'comments-rating'; // комментарии
 @import 'single-casino-review'; // страница категории казино ревью (вне дизайна)
 @import '404';
 @import 'footer';
 
 
 //blocks
-@import 'comments-rating'; // комментарии
 @import 'affiliate-item-vertical'; //front-page
 @import 'affiliate-vertical-block'; //front-page
 @import 'seo-text'; //front-page

@@ -18,9 +18,9 @@
   
           <?php comment_text() ?>
  
-          <div class="reply">
+        </div>
+        <div class="reply">
             <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-          </div>
         </div>
   <?php }
 ?>

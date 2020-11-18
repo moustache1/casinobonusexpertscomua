@@ -70,9 +70,15 @@
     }
     & .seo-text__right{
         order: -1;
+        position: relative;
+        &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
         background-image: url(images/seo-text-bg-reverse.png);
         background-repeat: no-repeat;
         background-size: cover;
+        }
     }
     & .seo-text__wrapper{
         justify-content: space-between;

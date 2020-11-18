@@ -215,7 +215,7 @@ class Breadcrumbs {
 
 	// Локализация
 	static $l10n = array(
-		'home'       => 'onlineslots.com.ua',
+		'home'       => 'casinobonusexperts.com.ua',
 		'paged'      => 'Страница %d',
 		'_404'       => 'Ошибка 404',
 		'search'     => 'Результаты поиска по запросу - <b>%s</b>',
@@ -685,14 +685,17 @@ wp_enqueue_style( 'dashicons' );
 add_action( 'comment_form_logged_in_after', 'ci_comment_rating_rating_field' ); add_action( 'comment_form_after_fields', 'ci_comment_rating_rating_field' ); function ci_comment_rating_rating_field () { ?>
 	<!-- <label class="label-for-rating" for="rating"> <span class="required"></span></label> -->
 	
-<!-- <fieldset class="comments-rating">
+<fieldset class="comments-rating">
+	<div class="rating-text">Оценка:</div>
+	<div class="rating-rating">
 		<span class="rating-container">
-			<?php //for ( $i = 5; $i >= 1; $i-- ) : ?>
-				<input type="radio" id="rating-<?php //echo esc_attr( $i ); ?>" name="rating" value="<?php echo esc_attr( $i ); ?>" /><label class="label-for-rating" for="rating-<?php echo esc_attr( $i ); ?>"><?php echo esc_html( $i ); ?></label>
-			<?php //endfor; ?>
+			<?php for ( $i = 5; $i >= 1; $i-- ) : ?>
+				<input type="radio" id="rating-<?php echo esc_attr( $i ); ?>" name="rating" value="<?php echo esc_attr( $i ); ?>" /><label class="label-for-rating" for="rating-<?php echo esc_attr( $i ); ?>"><?php echo esc_html( $i ); ?></label>
+			<?php endfor; ?>
 			<input type="radio" id="rating-0" class="star-cb-clear" name="rating" value="0" /><label for="rating-0">0</label>
 		</span>
-	</fieldset> -->
+	</div>
+</fieldset>
 
 	<?php
 }
@@ -705,20 +708,20 @@ function ci_comment_rating_save_comment_rating( $comment_id ) {
 	add_comment_meta( $comment_id, 'rating', $rating );
 }
 
-// //Make the rating required.
-// add_filter( 'preprocess_comment', 'ci_comment_rating_require_rating' );
-// function ci_comment_rating_require_rating( $commentdata ) {
-// 	if ( ! isset( $_POST['rating'] ) || 0 === intval( $_POST['rating'] ) )
-// 	wp_die( __( 'Error: Вы не добавили рейтинг. Пожалуйста, вернитесь на страницу и оставьте свою оценку.' ) );
-// 	return $commentdata;
-// }
+//Make the rating required.
+add_filter( 'preprocess_comment', 'ci_comment_rating_require_rating' );
+function ci_comment_rating_require_rating( $commentdata ) {
+	if ( ! isset( $_POST['rating'] ) || 0 === intval( $_POST['rating'] ) )
+	wp_die( __( 'Error: Вы не добавили рейтинг. Пожалуйста, вернитесь на страницу и оставьте свою оценку.' ) );
+	return $commentdata;
+}
 
 //Display the rating on a submitted comment.
 add_filter( 'comment_text', 'ci_comment_rating_display_rating');
 function ci_comment_rating_display_rating( $comment_text ){
     
 	if ( $rating = get_comment_meta( get_comment_ID(), 'rating', true ) ) {
-		$stars = '<div>
+		$stars = '<div class="comment-stars">
 
 ';
 		for ( $i = 1; $i <= $rating; $i++ ) {
@@ -727,7 +730,7 @@ function ci_comment_rating_display_rating( $comment_text ){
 		$stars .= '</div>
 
 ';
-		$comment_text = $comment_text . $stars;
+		$comment_text = $stars . $comment_text;
 		return $comment_text;
 	} else {
 		return $comment_text;

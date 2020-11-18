@@ -6,11 +6,11 @@
     @media screen and (max-width: 1020px) {
         flex-direction: column;
     }
-    &-img{
+    &-img img{
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        background-color: $secNormal;
+        object-fit: cover;
     }
     &-about{
         margin-left: 100px;
@@ -36,59 +36,24 @@
 }
 .author__blog{
     margin-top: 30px;
-    &-grid-container {
-        margin-top: 30px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-        grid-auto-rows: minmax(0, 252px);
-        grid-gap: 30px;
+    &-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & h2{
+            margin-bottom: 0;
+        }
     }
-      .blog1 { grid-area: blog1; }
-      .blog2 { grid-area: blog2; }
-      .blog3 { grid-area: blog3; }
-      .blog4 { grid-area: blog4; }
-      .blog5 { grid-area: blog5; }
-      .blog6 { grid-area: blog6; }
-      .blog7 { grid-area: blog7; }
-      .blog8 { grid-area: blog8; }
-      .main-blog1 { grid-area: main-blog1; }
-      .main-blog2 { grid-area: main-blog2; }
-}
-@media screen and (max-width: 1220px){
-    .author__blog-grid-container {
-        display: grid;
-        grid-template-columns: 270px 270px;
-        grid-template-rows: 252px 252px;
-        gap: 30px 30px;
-        grid-template-areas:
-            "main-blog1 main-blog1"
-            "main-blog1 main-blog1"
-            "blog1 blog2"
-            "blog3 blog4"
-            "blog5 blog6"
-            "blog7 blog8"
-            "main-blog2 main-blog2"
-            "main-blog2 main-blog2";
+    &-container {
+        margin: 30px 0;
+        display: flex;
+        flex-wrap: wrap;
+        & .blog {
+            margin-top: 0;
         }
-}
-@media screen and (max-width: 650px){
-    .author__blog-grid-container {
-        display: grid;
-        grid-template-columns: 270px 270px;
-        grid-template-rows: 252px 252px;
-        gap: 30px 30px;
-        grid-template-areas:
-            "main-blog1"
-            "main-blog1"
-            "blog1"
-            "blog2"
-            "blog3"
-            "blog4"
-            "blog5"
-            "blog6"
-            "blog7"
-            "blog8"
-            "main-blog2"
-            "main-blog2";
+        & .small-blog{
+            width: 270px;
+            margin: 10px;
         }
+    }
 }

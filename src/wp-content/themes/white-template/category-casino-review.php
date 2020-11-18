@@ -30,7 +30,6 @@ $horizontal_casino = get_field('horizontal_casino', $front_id);?>
         <?php endforeach; endif; ?>
     </div>
 
-        <!-- Подключение слайдера для мобильной версии(убираются горизонтальные блоки) -->
     <div class="affiliate-horizontal-block-mob">
         <div class="affiliate-horizontal-block-mob-item">
             <h1><?php $cat_id = get_query_var('cat');

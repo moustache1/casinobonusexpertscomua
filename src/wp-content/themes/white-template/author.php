@@ -5,6 +5,7 @@ $author_id = $curauth->ID;
 $avatar = get_field('avatar', 'user_'.$author_id);
 ?>
 
+
 <div class="author-block container">
 <?php if( function_exists('custom_breadcrumbs') ) custom_breadcrumbs(' > '); ?>
     <div class="author__content">
@@ -22,18 +23,54 @@ $avatar = get_field('avatar', 'user_'.$author_id);
     </div>
 
     <div class="author__blog">
-        <h2>Публикации автора:</h2>
-        <!-- <div class="pagination">
-            тут должна быть пагинация
-        </div> -->
-        <div class="author__blog-grid-container">
-            <div class="blog">
-                <?php  get_template_part('template_parts/blog-small-card');?>
+        <div class="author__blog-top">
+            <h2>Публикации автора:</h2>
+            <div class="pagination">
+                <?php 
+                $args_pagi = array(
+                    'show_all'     => false, // показаны все страницы участвующие в пагинации
+                    'end_size'     => 1,     // количество страниц на концах
+                    'mid_size'     => 1,     // количество страниц вокруг текущей
+                    'prev_next'    => true,  // выводить ли боковые ссылки "предыдущая/следующая страница".
+                    'prev_text'    => __(''),
+                    'next_text'    => __(''),
+                );
+                the_posts_pagination($args_pagi);
+                ?>
             </div>
         </div>
-        <!-- <div class="pagination">
-            тут должна быть пагинация
-        </div> -->
+
+        <div class="author__blog-container">
+             <?php $posts = new WP_Query( array(
+                // 'posts_per_page' => 6,
+                'paged' => $paged,
+                'author' => $author_id,
+                // 'orderby'     => 'date',
+                // 'include'     => array(),
+                ) ); ?>
+
+                <?php while ( $posts->have_posts() ) : $posts->the_post();
+                    get_template_part('template_parts/blog-small-card'); 
+                endwhile; ?>
+                <?php if (!($posts->have_posts())) {
+                    echo 'Публикаций нет';
+            } ?>
+
+        </div>
+
+        <div class="pagination right">
+            <?php 
+            $args_pagi = array(
+                'show_all'     => false, // показаны все страницы участвующие в пагинации
+                'end_size'     => 1,     // количество страниц на концах
+                'mid_size'     => 1,     // количество страниц вокруг текущей
+                'prev_next'    => true,  // выводить ли боковые ссылки "предыдущая/следующая страница".
+                'prev_text'    => __(''),
+                'next_text'    => __(''),
+            );
+            the_posts_pagination($args_pagi);
+            ?>
+        </div>
     </div>
 
 

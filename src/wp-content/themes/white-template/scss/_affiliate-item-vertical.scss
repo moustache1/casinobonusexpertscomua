@@ -26,6 +26,13 @@
     &-img img{
         border-radius: 8px;
     }
+    &-stars{
+        font-family: 'Montserrat-Bold', sans-serif;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 18px;
+        color: $secNormal;
+    }
     &-rating{
         display: flex;
         justify-content: space-around;

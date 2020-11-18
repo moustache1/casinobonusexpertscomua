@@ -7,6 +7,7 @@ $(document).ready(function(){
     $('.post-content').prependTo($('.main-text'));
     $('.post-content h1').appendTo($('.for-h'));
     $('.comments').appendTo($('.for-comments'));
+    $('.comment-form-wrapper').appendTo($('.for-comments'));
 
     //menu toggle
     // $('#menu-toggle-but').click(function () {
@@ -112,6 +113,7 @@ $('.faq').on('click', function (e) {
           // instead of a settings object
         ]
       })
+
 })
 
 
