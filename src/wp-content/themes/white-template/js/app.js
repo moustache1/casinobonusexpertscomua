@@ -9,19 +9,6 @@ $(document).ready(function(){
     $('.comments').appendTo($('.for-comments'));
     $('.comment-form-wrapper').appendTo($('.for-comments'));
 
-    //menu toggle
-    // $('#menu-toggle-but').click(function () {
-    //     $(this).toggleClass('open');
-    //     $(".main-nav").slideToggle('fast');
-    // });
-
-
-    // $('.burger').on('click', function () {
-    //     $('.burger').toggleClass('burger_active')
-    //     $('body').toggleClass('hidden')
-    //     $('.main-nav').slideToggle('slow')
-    // })
-
     $('.burger').on('click', function () {
       $(this).toggleClass("burger_active");
       $(".header__nav-wrapper").fadeToggle("slow");
@@ -75,6 +62,7 @@ $('.faq').on('click', function (e) {
 		'.faq-item__body'
 	)
 
+
     	// Autoreg
 	$('[data-link]').on('click', function () {
 		var link = $(this).data('link')
@@ -108,9 +96,6 @@ $('.faq').on('click', function (e) {
               slidesToScroll: 1
             }
           }
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
         ]
       })
 

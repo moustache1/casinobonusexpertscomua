@@ -34,20 +34,29 @@
     &-about{
         text-align: left;
         margin-left: 30px;
+        width: 195px;
+    }
+    &-stars{
+        font-family: 'Montserrat-Bold', sans-serif;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 18px;
+        color: $secNormal;
     }
     &-rating{
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
         width: 100%;
         margin-top: 10px;
     }
     &-mark{
-        font-family: 'Montserrat-Bold', sans-serif;
-        font-weight: 900;
-        font-size: 12px;
-        line-height: 16px;
+        padding-top: 4px;
+        margin-left: 10px;
         color: $secNormal;
+        font-family: 'Montserrat-Bold', sans-serif;
+        font-size: 16px;
+        font-weight: 900;
     }
     &-title{
         margin-top: 7px;

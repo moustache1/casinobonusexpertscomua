@@ -39,6 +39,7 @@
         align-items: center;
     }
     &-mark{
+        padding-top: 4px;
         margin-left: 10px;
         color: $secNormal;
         font-family: 'Montserrat-Bold', sans-serif;
@@ -164,227 +165,22 @@
         max-width: 770px;
     }
 
-    &-reviews{
-        margin-top: 60px;
-        &-title{
-            font-family: 'Montserrat-Bold', sans-serif;
-            font-weight: 900;
-            color: $monoDarkest;
-            @include h2;
-        }
-        &-blocks{
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 30px;
-            @media screen and (max-width: 800px) {
-                flex-direction: column;
-            }
-        }
-        &-item{
-            width: 48%;
-            box-shadow: 0px 8px 16px rgba(41, 13, 98, 0.15);
-            border-radius: 8px;
-            padding: 24px 20px;
-            @media screen and (max-width: 800px) {
-                width: 100%;
-                margin-top: 30px;
-            }
-            &:nth-child(even){
-                margin-left: 30px;
-                @media screen and (max-width: 800px) {
-                    margin-left: 0;
-                }
-            }
-            &:nth-child(n+3){
-                margin-top: 30px;
-            }
-            &-top{
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                @media screen and (max-width: 500px) {
-                    flex-direction: column;
-                }
-            }
-            &-name{
-                min-width: 169px;
-                font-family: 'Montserrat-Bold', sans-serif;
-                font-weight: 900;
-                font-size: 16px;
-                line-height: 20px;
-                color: $monoDarkest;
-            }
-            &-rating{
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                width: 100%;
-                @media screen and (max-width: 500px) {
-                    justify-content: center;
-                    margin-top: 10px;
-                }
-            }
-            &-mark{
-                margin-left: 20px;
-                font-family: 'Montserrat-Bold', sans-serif;
-                font-weight: 900;
-                font-size: 16px;
-                line-height: 16px;
-                color: $secNormal;
-            }
-            &-text{
-                margin-top: 20px;
-            }
-            &-date{
-                margin-top: 20px;
-                font-family: 'Montserrat-Bold', sans-serif;
-                font-weight: 900;
-                font-size: 12px;
-                line-height: 16px;
-                color: $monoDark;
-            }
-        }
-        &-subtitle{
-            font-family: 'Montserrat-Bold', sans-serif;
-            font-weight: 900;
-            font-size: 24px;
-            line-height: 29px;
-            color: $monoDarkest;
-            margin: 60px 0 30px;
-        }
-        &-form{
-            display: flex;
-            justify-content: flex-start;
-            @media screen and (max-width: 1182px) {
-                justify-content: space-between;
-            }
-            @media screen and (max-width: 1038px) {
-                flex-direction: column;
-            }
-            @media screen and (max-width: 644px) {
-                max-width: 270px;
-            }
-            &-left{
-                width: 35%;
-                @media screen and (max-width: 1038px) {
-                    width: 100%;
-                }
-                @media screen and (max-width: 644px) {
-                    display: flex;
-                    flex-direction: column;
-                }
-                & > input{
-                    max-width: 378px;
-                    width: 100%;
-                    border: none;
-                    outline: none;
-                    box-shadow: 4px 4px 8px rgba(41, 13, 98, 0.15);
-                    border-radius: 8px;
-                    padding: 13px 0 13px 20px;
-                    font-size: 12px;
-                    line-height: 16px;
-                    color: $monoDark;
-                    @media screen and (max-width: 1038px) {
-                        max-width: 600px;
-                    }
-                    @media screen and (max-width: 644px) {
-                        max-width: 270px;
-                        width: 270px;
-                    }
-                    &:nth-child(n+2){
-                        margin-top: 20px;
-                    }
-                    &:focus::-webkit-input-placeholder{
-                        color: transparent;
-                    }
-                    &:focus:-moz-placeholder{
-                        color: transparent;
-                    }
-                    &:focus::-moz-placeholder{
-                        color: transparent;
-                    }
-                    :focus:-ms-input-placeholder{
-                        color: transparent;
-                    }
-                }
-            }
-            &-right{
-                width: 64%;
-                @media screen and (max-width: 1038px) {
-                    margin-top: 30px;
-                    width: 100%;
-                }
-                & > textarea{
-                    max-width: 745px;
-                    width: 100%;
-                    min-height: 159px;
-                    overflow: auto;
-                    outline: none;
-                    resize: none;
-                    border: none;
-                    padding: 13px 0 13px 20px;
-                    box-shadow: 0px 4px 4px rgba(41, 13, 98, 0.15);
-                    border-radius: 8px;
-                    font-size: 12px;
-                    line-height: 16px;
-                    color: $monoDark;
-                    @media screen and (max-width: 1182px) {
-                        max-width: 600px;
-                    }
-                    @media screen and (max-width: 644px) {
-                        max-width: 270px;
-                    }
-                    &:focus::-webkit-input-placeholder{
-                        color: transparent;
-                    }
-                    &:focus:-moz-placeholder{
-                        color: transparent;
-                    }
-                    &:focus::-moz-placeholder{
-                        color: transparent;
-                    }
-                    :focus:-ms-input-placeholder{
-                        color: transparent;
-                    }
-                }
-            } 
-            &-rating{
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                margin-top: 15px;
-            }
-            &-title{
-                font-family: 'Montserrat-Bold', sans-serif;
-                font-weight: 900;
-                font-size: 12px;
-                line-height: 16px;
-                color: $monoDark;
-            }
-            &-stars{
-                margin: 0 10px;
-            }
-            &-mark{
-                font-family: 'Montserrat-Bold', sans-serif;
-                font-weight: 900;
-                font-size: 12px;
-                line-height: 16px;
-                color: $secNormal;
-            }
-            &-btn{
-                text-align: right;
-                @media screen and (max-width: 1038px) {
-                    text-align: left;
-                }
-            }
-        }
-    }
 }
 .casino-review-btn.review-block .btn-main a {
     @media screen and (max-width: 1240px) {
         padding: 9px 96px 12px 96px;
     }
 }
+.casino-review-reviews-title{
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 51px;
+    color: #38394D;
+}
+
+
+// Блок отзывов
 .average-ratings {
     display: none !important;
 }
@@ -416,6 +212,9 @@
     margin: 30px 0;
     &:nth-child(even){
         margin-left: 30px;
+        @media screen and (max-width: 1213px) {
+            margin-left: 0;
+        }
     }
 }
 .comment-meta {
@@ -472,10 +271,7 @@ textarea#comment.comment-form {
     font-size: 12px;
     line-height: 16px;
     color: $monoDark;
-    @media screen and (max-width: 1182px) {
-        max-width: 600px;
-    }
-    @media screen and (max-width: 644px) {
+    @media screen and (max-width: 616px) {
         max-width: 270px;
     }
     &:focus::-webkit-input-placeholder{

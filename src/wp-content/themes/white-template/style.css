@@ -125,7 +125,7 @@ a{text-decoration:none;color:#796ae1}a:hover{color:#6c5bd9}p{margin:20px 0;text-
 .casino-review-post .author{margin-bottom:60px}.casino-review-top-block{display:flex;justify-content:flex-start;width:100%;margin-top:30px}
 @media screen and (max-width:900px){.casino-review-top-block{flex-direction:column;align-items:center}
 }.casino-review-left{max-width:470px}@media screen and (max-width:514px){.casino-review-left{text-align:center}
-}.casino-review-rating{display:flex;justify-content:flex-end;align-items:center}.casino-review-mark{margin-left:10px;color:#796ae1;font-family:Montserrat-Bold,sans-serif;font-size:16px;font-weight:900}
+}.casino-review-rating{display:flex;justify-content:flex-end;align-items:center}.casino-review-mark{padding-top:4px;margin-left:10px;color:#796ae1;font-family:Montserrat-Bold,sans-serif;font-size:16px;font-weight:900}
 .casino-review-img{margin-top:15px}.casino-review-img img{border-radius:8px;width:470px;height:236px}
 @media screen and (max-width:514px){.casino-review-img img{width:270px;height:auto}
 }.casino-review-btn{margin-top:25px;text-align:right}.casino-review-btn .btn-main{padding:9px 185px 12px 191px}
@@ -142,53 +142,17 @@ a{text-decoration:none;color:#796ae1}a:hover{color:#6c5bd9}p{margin:20px 0;text-
 }.casino-review-top-info-block{max-width:370px}.casino-review-top-info-block:nth-child(2){margin:0 30px}
 @media screen and (max-width:1000px){.casino-review-top-info-block:nth-child(2){margin:0}
 }.casino-review-btn.review-block .btn-main a{padding:9px 100px 12px 100px}.casino-review-single-post{max-width:770px}
-.casino-review-reviews{margin-top:60px}.casino-review-reviews-title{font-family:Montserrat-Bold,sans-serif;font-weight:900;color:#192744;font-size:42px;line-height:51px;font-weight:900}
-@media screen and (max-width:768px){.casino-review-reviews-title{font-size:24px;line-height:28px}
-}.casino-review-reviews-blocks{display:flex;flex-wrap:wrap;margin-top:30px}@media screen and (max-width:800px){.casino-review-reviews-blocks{flex-direction:column}
-}.casino-review-reviews-item{width:48%;box-shadow:0 8px 16px rgba(41,13,98,.15);border-radius:8px;padding:24px 20px}
-@media screen and (max-width:800px){.casino-review-reviews-item{width:100%;margin-top:30px}
-}.casino-review-reviews-item:nth-child(even){margin-left:30px}@media screen and (max-width:800px){.casino-review-reviews-item:nth-child(even){margin-left:0}
-}.casino-review-reviews-item:nth-child(n+3){margin-top:30px}.casino-review-reviews-item-top{display:flex;justify-content:flex-end;align-items:center}
-@media screen and (max-width:500px){.casino-review-reviews-item-top{flex-direction:column}
-}.casino-review-reviews-item-name{min-width:169px;font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:16px;line-height:20px;color:#192744}
-.casino-review-reviews-item-rating{display:flex;justify-content:flex-end;align-items:center;width:100%}
-@media screen and (max-width:500px){.casino-review-reviews-item-rating{justify-content:center;margin-top:10px}
-}.casino-review-reviews-item-mark{margin-left:20px;font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:16px;line-height:16px;color:#796ae1}
-.casino-review-reviews-item-text{margin-top:20px}.casino-review-reviews-item-date{margin-top:20px;font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:12px;line-height:16px;color:#8690a0}
-.casino-review-reviews-subtitle{font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:24px;line-height:29px;color:#192744;margin:60px 0 30px}
-.casino-review-reviews-form{display:flex;justify-content:flex-start}@media screen and (max-width:1182px){.casino-review-reviews-form{justify-content:space-between}
-}@media screen and (max-width:1038px){.casino-review-reviews-form{flex-direction:column}
-}@media screen and (max-width:644px){.casino-review-reviews-form{max-width:270px}
-}.casino-review-reviews-form-left{width:35%}@media screen and (max-width:1038px){.casino-review-reviews-form-left{width:100%}
-}@media screen and (max-width:644px){.casino-review-reviews-form-left{display:flex;flex-direction:column}
-}.casino-review-reviews-form-left>input{max-width:378px;width:100%;border:0;outline:0;box-shadow:4px 4px 8px rgba(41,13,98,.15);border-radius:8px;padding:13px 0 13px 20px;font-size:12px;line-height:16px;color:#8690a0}
-@media screen and (max-width:1038px){.casino-review-reviews-form-left>input{max-width:600px}
-}@media screen and (max-width:644px){.casino-review-reviews-form-left>input{max-width:270px;width:270px}
-}.casino-review-reviews-form-left>input:nth-child(n+2){margin-top:20px}.casino-review-reviews-form-left>input:focus::-webkit-input-placeholder{color:transparent}
-.casino-review-reviews-form-left>input:focus:-moz-placeholder{color:transparent}.casino-review-reviews-form-left>input:focus::-moz-placeholder{color:transparent}
-.casino-review-reviews-form-left>input :focus:-ms-input-placeholder{color:transparent}
-.casino-review-reviews-form-right{width:64%}@media screen and (max-width:1038px){.casino-review-reviews-form-right{margin-top:30px;width:100%}
-}.casino-review-reviews-form-right>textarea{max-width:745px;width:100%;min-height:159px;overflow:auto;outline:0;resize:none;border:0;padding:13px 0 13px 20px;box-shadow:0 4px 4px rgba(41,13,98,.15);border-radius:8px;font-size:12px;line-height:16px;color:#8690a0}
-@media screen and (max-width:1182px){.casino-review-reviews-form-right>textarea{max-width:600px}
-}@media screen and (max-width:644px){.casino-review-reviews-form-right>textarea{max-width:270px}
-}.casino-review-reviews-form-right>textarea:focus::-webkit-input-placeholder{color:transparent}
-.casino-review-reviews-form-right>textarea:focus:-moz-placeholder{color:transparent}
-.casino-review-reviews-form-right>textarea:focus::-moz-placeholder{color:transparent}
-.casino-review-reviews-form-right>textarea :focus:-ms-input-placeholder{color:transparent}
-.casino-review-reviews-form-rating{display:flex;justify-content:flex-start;align-items:center;margin-top:15px}
-.casino-review-reviews-form-title{font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:12px;line-height:16px;color:#8690a0}
-.casino-review-reviews-form-stars{margin:0 10px}.casino-review-reviews-form-mark{font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:12px;line-height:16px;color:#796ae1}
-.casino-review-reviews-form-btn{text-align:right}@media screen and (max-width:1038px){.casino-review-reviews-form-btn{text-align:left}
-}@media screen and (max-width:1240px){.casino-review-btn.review-block .btn-main a{padding:9px 96px 12px 96px}
-}.average-ratings{display:none !important}.comment-reply-title{display:none}.comment-form-comment>label{display:none}
+@media screen and (max-width:1240px){.casino-review-btn.review-block .btn-main a{padding:9px 96px 12px 96px}
+}.casino-review-reviews-title{font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:42px;line-height:51px;color:#38394d}
+.average-ratings{display:none !important}.comment-reply-title{display:none}.comment-form-comment>label{display:none}
 .comment-form-author>label{display:none}.comment-form-email>label{display:none}.comments{display:flex;flex-wrap:wrap}
 .comment-li{width:570px;height:197px;box-shadow:0 8px 16px rgba(41,13,98,.15);border-radius:8px;padding:25px 20px;margin:30px 0}
-.comment-li:nth-child(even){margin-left:30px}.comment-meta{margin-top:20px;font-family:Montserrat-Bold,sans-serif;font-weight:700;font-size:12px;line-height:16px;color:#8690a0;float:left}
+.comment-li:nth-child(even){margin-left:30px}@media screen and (max-width:1213px){.comment-li:nth-child(even){margin-left:0}
+}.comment-meta{margin-top:20px;font-family:Montserrat-Bold,sans-serif;font-weight:700;font-size:12px;line-height:16px;color:#8690a0;float:left}
 .comment-author{max-width:169px;font-family:Montserrat-Bold,sans-serif;font-weight:700;font-size:16px;line-height:16px;color:#192744}
 .comments p{text-align:justify;max-width:530px;margin:10px auto 0;font-family:Montserrat-Regular,sans-serif;font-weight:500;font-size:14px;line-height:18px;color:#192744;overflow:hidden;text-overflow:ellipsis;display:-moz-box;-moz-box-orient:vertical;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;line-clamp:4;box-orient:vertical}
 .comment-respond p{margin:0}p.comment-notes{display:none}textarea#comment.comment-form{width:570px;min-height:159px;overflow:auto;outline:0;resize:none;border:3px solid #dfe5ee;padding:13px 0 13px 20px;border-radius:8px;font-size:12px;line-height:16px;color:#8690a0}
-@media screen and (max-width:1182px){textarea#comment.comment-form{max-width:600px}
-}@media screen and (max-width:644px){textarea#comment.comment-form{max-width:270px}
+@media screen and (max-width:616px){textarea#comment.comment-form{max-width:270px}
 }textarea#comment.comment-form:focus::-webkit-input-placeholder{color:transparent}
 textarea#comment.comment-form:focus:-moz-placeholder{color:transparent}textarea#comment.comment-form:focus::-moz-placeholder{color:transparent}
 textarea#comment.comment-form :focus:-ms-input-placeholder{color:transparent}input#author.author,input#email{width:378px;border:3px solid #dfe5ee;outline:0;border-radius:8px;padding:13px 0 13px 20px;font-size:12px;line-height:16px;color:#8690a0}
@@ -248,8 +212,8 @@ p.comment-form-author{margin:0;width:100%}.casino-review-post .author{margin-bot
 .affiliate__vertical:hover{border:3px solid #796ae1;border-top:0;cursor:pointer}.affiliate__vertical .slick-slide{height:440px;width:270px}
 .affiliate__vertical .slick-slide .slick-current .slick-active{height:440px;width:270px}
 .affiliate__vertical-img img{border-radius:8px}.affiliate__vertical-stars{font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:14px;line-height:18px;color:#796ae1}
-.affiliate__vertical-rating{display:flex;justify-content:space-around;align-items:center;width:100%;margin-top:10px}
-.affiliate__vertical-mark{font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:12px;line-height:16px;color:#796ae1}
+.affiliate__vertical-rating{display:flex;justify-content:center;align-items:center;width:100%;margin-top:10px}
+.affiliate__vertical-mark{padding-top:4px;margin-left:10px;color:#796ae1;font-family:Montserrat-Bold,sans-serif;font-size:16px;font-weight:900}
 .affiliate__vertical-title{margin-top:20px;font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:24px;line-height:29px;font-weight:900;color:#192744}
 @media screen and (max-width:768px){.affiliate__vertical-title{font-size:16px;line-height:150%}
 }.affiliate__vertical-subtitle{color:#796ae1;font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:14px;line-height:21px;font-weight:700}
@@ -279,10 +243,10 @@ p.comment-form-author{margin:0;width:100%}.casino-review-post .author{margin-bot
 @media screen and (max-width:1127px){.seo-text__btn{margin-top:5%}}.seo-text__line{width:250px;height:2px;background-color:#f6f8fc}
 @media screen and (max-width:650px){.seo-text__line{display:none}}.seo-text__right{background-image:url(images/seo-text-bg.png);background-repeat:no-repeat;background-size:cover}
 .seo-text__right img{max-width:600px;width:100%;height:auto}@media screen and (max-width:1127px){.seo-text__right{margin-top:30px;text-align:center}
-}.seo-text.reverse{margin-top:5%}@media screen and (max-width:1127px){.seo-text.reverse .seo-text__left{margin-top:5%}
-}.seo-text.reverse .seo-text__right{order:-1;position:relative}.seo-text.reverse .seo-text__right::before{position:absolute;top:0;left:0;background-image:url(images/seo-text-bg-reverse.png);background-repeat:no-repeat;background-size:cover}
-.seo-text.reverse .seo-text__wrapper{justify-content:space-between}.seo-text.reverse .seo-text__line{order:1}
-.games-block{margin-top:10%}.games-block-top{display:flex;justify-content:space-between;align-items:center}
+}.seo-text.reverse{margin-top:5%;position:relative}.seo-text.reverse::before{content:"";display:block;position:absolute;top:0;bottom:0;right:0;left:0;background-image:url(images/bg_blog_2.png);background-repeat:no-repeat;background-size:cover;background-position:50% 0}
+@media screen and (max-width:1127px){.seo-text.reverse .seo-text__left{margin-top:5%}
+}.seo-text.reverse .seo-text__right{order:-1}.seo-text.reverse .seo-text__wrapper{justify-content:space-between}
+.seo-text.reverse .seo-text__line{order:1}.games-block{margin-top:10%}.games-block-top{display:flex;justify-content:space-between;align-items:center}
 @media(max-width:600px){.games-block-top{flex-direction:column;align-items:start}
 }.games-block-top .for-h{padding-top:7px}.games-block-btn{text-align:center}.games-block-btn .btn-primary{padding:9px 54px 12px 54px}
 .game-items-cat.games-block{margin-top:30px}.game-items-cat.games-block h1{margin-top:0}
@@ -322,8 +286,9 @@ a.next.page-numbers:hover:before{cursor:pointer}@media(max-width:1300px){.pagina
 .affiliate__horizontal-number{font-family:Montserrat-Bold,sans-serif;font-size:16px;line-height:20px;font-weight:900;width:6%}
 @media screen and (max-width:768px){.affiliate__horizontal-number{font-size:14px;line-height:21px}
 }.affiliate__horizontal-img{margin-bottom:-5px}.affiliate__horizontal-img img{width:200px;height:120px}
-.affiliate__horizontal-about{text-align:left;margin-left:30px}.affiliate__horizontal-rating{display:flex;justify-content:space-around;align-items:center;width:100%;margin-top:10px}
-.affiliate__horizontal-mark{font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:12px;line-height:16px;color:#796ae1}
+.affiliate__horizontal-about{text-align:left;margin-left:30px;width:195px}.affiliate__horizontal-stars{font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:14px;line-height:18px;color:#796ae1}
+.affiliate__horizontal-rating{display:flex;justify-content:flex-start;align-items:center;width:100%;margin-top:10px}
+.affiliate__horizontal-mark{padding-top:4px;margin-left:10px;color:#796ae1;font-family:Montserrat-Bold,sans-serif;font-size:16px;font-weight:900}
 .affiliate__horizontal-title{margin-top:7px;font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:24px;line-height:29px;font-weight:900;color:#192744}
 @media screen and (max-width:768px){.affiliate__horizontal-title{font-size:16px;line-height:150%}
 }.affiliate__horizontal-detail{margin:0 30px;text-align:left;width:270px}.affiliate__horizontal-price{color:#796ae1;margin-top:18px;font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:24px;line-height:29px;font-weight:900}
@@ -340,7 +305,7 @@ a.next.page-numbers:hover:before{cursor:pointer}@media(max-width:1300px){.pagina
 .main-blog-date{text-transform:uppercase}.main-blog-dot{margin:0 5px}.main-blog-author a{color:#796ae1}
 .main-blog-title{font-family:Montserrat-Bold,sans-serif;font-size:16px;line-height:20px;font-weight:900;color:#192744;overflow:hidden;text-overflow:ellipsis;display:-moz-box;-moz-box-orient:vertical;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-clamp:2;box-orient:vertical}
 @media screen and (max-width:768px){.main-blog-title{font-size:14px;line-height:21px}
-}.main-blog-descr{font-family:Montserrat-Bold,sans-serif;font-size:14px;line-height:18px;font-weight:500;color:#192744;overflow:hidden;text-overflow:ellipsis;display:-moz-box;-moz-box-orient:vertical;display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;line-clamp:6;box-orient:vertical}
+}.main-blog-descr{font-family:Montserrat-Regular,sans-serif;font-size:14px;line-height:18px;font-weight:500;color:#192744;overflow:hidden;text-overflow:ellipsis;display:-moz-box;-moz-box-orient:vertical;display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;line-clamp:6;box-orient:vertical}
 @media screen and (max-width:768px){.main-blog-descr{font-size:14px;line-height:21px}
 }.main-blog-descr p{margin:15px 0}.main-blog-read{position:absolute;right:21px;bottom:20px}
 .small-blog{width:270px;height:252px;background:#fff;box-shadow:0 8px 16px rgba(41,13,98,.15);border-radius:8px;position:relative}
@@ -372,8 +337,8 @@ a.next.page-numbers:hover:before{cursor:pointer}@media(max-width:1300px){.pagina
 }.author__left-status{margin-right:5px;font-size:14px;line-height:18px;font-weight:500;font-family:Montserrat-Bold,sans-serif;color:#192744}
 @media screen and (max-width:768px){.author__left-status{font-size:14px;line-height:21px}
 }.author__left-date{font-size:12px;line-height:21px;font-weight:900;font-size:14px;font-family:Montserrat-Bold,sans-serif;color:#192744}
-.author__btn{margin:4px 0 0 30px}@media screen and (max-width:842px){.author__btn{margin:60px 0 0 30px}
-}@media screen and (max-width:648px){.author__btn{margin:60px 0 0 0}}.author__btn a{font-size:12px;line-height:21px;font-weight:900;font-family:Montserrat-Bold,sans-serif;color:#796ae1;text-transform:uppercase;padding:39px 20px;border:3px solid #796ae1;cursor:pointer}
+.author__btn{margin:4px 0 0 24px}@media screen and (max-width:842px){.author__btn{margin:60px 0 60px 30px}
+}@media screen and (max-width:648px){.author__btn{margin:60px 0}}.author__btn a{font-size:12px;line-height:21px;font-weight:900;font-family:Montserrat-Bold,sans-serif;color:#796ae1;text-transform:uppercase;padding:39px 20px;border:3px solid #796ae1;cursor:pointer}
 .author__btn a:hover{color:#fff;background-color:#796ae1}.blog-post-slider{margin:15px 0 40px}
 .blog-post-slider .affiliate__vertical{margin:0 auto 15px}.blog-post-slider .slick-dots{bottom:-29px;display:flex;justify-content:center}
 .blog-post-slider .slick-dots li{width:16px;height:16px;margin:0 20px}.blog-post-slider .slick-dots li button{width:16px;height:16px}

@@ -25,8 +25,11 @@
             ?> 
         </div>
         <div class="affiliate__vertical-mark">
-            (4.1) - Отлично
-
+            <?php if ($average) {
+                echo $average;
+            } else {
+                echo '';
+            } ?>
         </div>
     </div>
     <div class="affiliate__vertical-title">
@@ -41,8 +44,8 @@
     <div class="affiliate__vertical-descr">
         <span><?php echo $casinoparameter['casino_parameter_description']; ?></span>
     </div>
-    <div class="btn-main">
-        <div data-link="Z28tcGxheQ==">Играть сейчас</div>
+    <div class="btn-main" data-link="cG0tc3BvcnQ=">
+        Играть сейчас
     </div>
     <div class="affiliate__vertical-read">
         <a href="<?php the_permalink(); ?>">Read review ></a>

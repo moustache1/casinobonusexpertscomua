@@ -9,10 +9,31 @@
     <div class="affiliate__horizontal-about">
         <div class="affiliate__horizontal-rating">
             <div class="affiliate__horizontal-stars">
-                <img src="<?php bloginfo("template_url"); ?>/images/icons_stars.png" alt="Stars">   
+            <?php $average = ci_comment_rating_get_average_ratings( $post->ID); $stars = '';?>
+            <?php
+                if ( $average ) {
+                    for ( $i = 1; $i <= $average + 1; $i++ ) {
+                        $width = intval( $i - $average > 0 ? 20 - ( ( $i - $average ) * 20 ) : 20 );
+                        if ( 0 === $width ) {
+                            continue;
+                        }
+                            $stars .= '<span class="dashicons dashicons-star-filled dashicons-style" style="overflow:hidden; width:' . $width . 'px" class="dashicons dashicons-star-filled dashicons-style"></span>';
+                        if ( $i - $average > 0 ) {
+                            $stars .= '<span style="overflow:hidden; position:relative; left:-' . $width .'px;" class="dashicons dashicons-star-empty dashicons-style"></span>';
+                        } 
+                    }
+                    echo $stars;
+                } else {
+                    echo 'No Review';
+                }
+            ?> 
             </div>
             <div class="affiliate__horizontal-mark">
-                (4.1) - Отлично
+                <?php if ($average) {
+                    echo $average;
+                } else {
+                    echo '';
+                } ?>
             </div>
         </div>
         <div class="affiliate__horizontal-title">
@@ -31,7 +52,7 @@
         </div>
     </div>
     <div class="affiliate__horizontal-btn">
-        <div class="btn-main" data-link="Z28tcGxheQ==">Select a payout speed</div>
+        <div class="btn-main" data-link="cG0=">Select a payout speed</div>
     </div>
 
 </div>
