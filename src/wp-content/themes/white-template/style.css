@@ -147,12 +147,15 @@ a{text-decoration:none;color:#796ae1}a:hover{color:#6c5bd9}p{margin:20px 0;text-
 .average-ratings{display:none !important}.comment-reply-title{display:none}.comment-form-comment>label{display:none}
 .comment-form-author>label{display:none}.comment-form-email>label{display:none}.comments{display:flex;flex-wrap:wrap}
 .comment-li{width:570px;height:197px;box-shadow:0 8px 16px rgba(41,13,98,.15);border-radius:8px;padding:25px 20px;margin:30px 0}
-.comment-li:nth-child(even){margin-left:30px}@media screen and (max-width:1213px){.comment-li:nth-child(even){margin-left:0}
-}.comment-meta{margin-top:20px;font-family:Montserrat-Bold,sans-serif;font-weight:700;font-size:12px;line-height:16px;color:#8690a0;float:left}
+@media screen and (max-width:1213px){.comment-li{width:520px}}@media screen and (max-width:1114px){.comment-li{width:470px}
+}@media screen and (max-width:900px){.comment-li{width:400px}}.comment-li:nth-child(even){margin-left:30px}
+@media screen and (max-width:1013px){.comment-li:nth-child(even){margin-left:10px}
+}@media screen and (max-width:853px){.comment-li:nth-child(even){margin-left:0}}.comment-meta{margin-top:20px;font-family:Montserrat-Bold,sans-serif;font-weight:700;font-size:12px;line-height:16px;color:#8690a0;float:left}
 .comment-author{max-width:169px;font-family:Montserrat-Bold,sans-serif;font-weight:700;font-size:16px;line-height:16px;color:#192744}
 .comments p{text-align:justify;max-width:530px;margin:10px auto 0;font-family:Montserrat-Regular,sans-serif;font-weight:500;font-size:14px;line-height:18px;color:#192744;overflow:hidden;text-overflow:ellipsis;display:-moz-box;-moz-box-orient:vertical;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;line-clamp:4;box-orient:vertical}
-.comment-respond p{margin:0}p.comment-notes{display:none}textarea#comment.comment-form{width:570px;min-height:159px;overflow:auto;outline:0;resize:none;border:3px solid #dfe5ee;padding:13px 0 13px 20px;border-radius:8px;font-size:12px;line-height:16px;color:#8690a0}
-@media screen and (max-width:616px){textarea#comment.comment-form{max-width:270px}
+.comment-respond p{margin:0}p.comment-notes{display:none}textarea#comment.comment-form{width:670px;min-height:159px;overflow:auto;outline:0;resize:none;border:3px solid #dfe5ee;padding:13px 20px 13px 20px;border-radius:8px;font-size:12px;line-height:16px;color:#8690a0}
+@media screen and (max-width:1213px){textarea#comment.comment-form{width:570px}}@media screen and (max-width:1114px){textarea#comment.comment-form{width:470px}
+}@media screen and (max-width:900px){textarea#comment.comment-form{width:400px}}@media screen and (max-width:616px){textarea#comment.comment-form{max-width:270px}
 }textarea#comment.comment-form:focus::-webkit-input-placeholder{color:transparent}
 textarea#comment.comment-form:focus:-moz-placeholder{color:transparent}textarea#comment.comment-form:focus::-moz-placeholder{color:transparent}
 textarea#comment.comment-form :focus:-ms-input-placeholder{color:transparent}input#author.author,input#email{width:378px;border:3px solid #dfe5ee;outline:0;border-radius:8px;padding:13px 0 13px 20px;font-size:12px;line-height:16px;color:#8690a0}
@@ -162,13 +165,19 @@ textarea#comment.comment-form :focus:-ms-input-placeholder{color:transparent}inp
 input#author.author:focus:-moz-placeholder,input#email:focus:-moz-placeholder{color:transparent}
 input#author.author:focus::-moz-placeholder,input#email:focus::-moz-placeholder{color:transparent}
 input#author.author :focus:-ms-input-placeholder,input#email :focus:-ms-input-placeholder{color:transparent}
-input#submit.submit{margin-top:10px;padding:11px 55px 10px 55px;border-radius:24px;border:3px solid #796ae1;font-family:Montserrat-Bold,sans-serif;font-size:12px;line-height:21px;font-weight:900;background-color:#fff;color:#796ae1;text-transform:uppercase;cursor:pointer}
+input#submit.submit{padding:11px 55px 10px 55px;border-radius:24px;border:3px solid #796ae1;font-family:Montserrat-Bold,sans-serif;font-size:12px;line-height:21px;font-weight:900;background-color:#fff;color:#796ae1;text-transform:uppercase;cursor:pointer}
 input#submit.submit:hover{background:#8ca5ff;color:#fff;border:3px solid #8ca5ff}
 p.comment-form-author{margin:0;width:100%}.casino-review-post .author{margin-bottom:0}
 .comments #submit{background-color:#fff;padding:9px 55px 11px 55px;border-radius:24px;border:3px solid #796ae1;font-family:Montserrat-Bold,sans-serif;font-size:12px;line-height:21px;font-weight:900;color:#796ae1;text-transform:uppercase;cursor:pointer}
 .comments #submit:hover{background:#8ca5ff;color:#fff;border:3px solid #8ca5ff}.comments-rating{margin-top:20px;display:flex;justify-content:flex-start;align-items:center}
 .rating-text{margin-right:20px;font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:12px;line-height:16px;color:#8690a0}
-.bg-404{font-weight:900;font-size:288px;line-height:351px;font-family:Montserrat-Bold,sans-serif;color:#dfe5ee;z-index:-1;margin-left:30%}
+.comment-form{display:grid;grid-template-columns:470px 670px;grid-template-rows:44px 44px 44px 44px;gap:30px 30px;grid-template-areas:"comment-form-author comment-form-comment" "comment-form-email comment-form-comment" "comments-rating comment-formcomment" "empty form-submit"}
+.comment-form-author{grid-area:comment-form-author}.comment-form-email{grid-area:comment-form-email}
+.comments-rating{grid-area:comments-rating}.comment-form-comment{grid-area:comment-form-comment}
+.form-submit{grid-area:form-submit}.empty{grid-area:empty}@media screen and (max-width:1213px){.comment-form{display:grid;grid-template-columns:470px 470px;grid-template-rows:44px 44px 44px 44px;gap:30px 30px;grid-template-areas:"comment-form-author comment-form-comment" "comment-form-email comment-form-comment" "comments-rating comment-formcomment" "empty form-submit"}
+}@media screen and (max-width:1013px){.comment-form{display:flex;flex-direction:column}
+}p.form-submit{text-align:right}@media screen and (max-width:1013px){p.form-submit{text-align:left}
+}.bg-404{font-weight:900;font-size:288px;line-height:351px;font-family:Montserrat-Bold,sans-serif;color:#dfe5ee;z-index:-1;margin-left:30%}
 @media screen and (max-width:720px){.bg-404{margin-left:0}}@media screen and (max-width:520px){.bg-404{font-size:150px;line-height:200px;text-align:center}
 }.text-404{z-index:99;margin-top:-15%;margin-left:41%;max-width:670px;width:100%;text-align:left}
 @media screen and (max-width:1176px){.text-404{margin-left:20%}}@media screen and (max-width:852px){.text-404{margin-left:0}
@@ -180,7 +189,7 @@ p.comment-form-author{margin:0;width:100%}.casino-review-post .author{margin-bot
 @media screen and (max-width:866px){.footer__top-wrapper{flex-direction:column;margin-top:20px}
 }.footer__top-descr{margin-left:30px}@media screen and (max-width:666px){.footer__top-descr{margin:20px 0 0 0}
 }.footer__top-title{font-size:12px;line-height:21px;font-weight:900;font-family:Montserrat-Bold,sans-serif;color:#192744;text-transform:uppercase}
-.footer__top-link{font-size:16px;line-height:20px;font-weight:900;font-family:Montserrat-Bold,sans-serif;color:#796ae1;text-transform:uppercase}
+.footer__top-link{font-size:16px;line-height:20px;font-weight:900;font-family:Montserrat-Bold,sans-serif;color:#796ae1;text-transform:uppercase;cursor:pointer}
 @media screen and (max-width:768px){.footer__top-link{font-size:14px;line-height:21px}
 }.footer__top-sprite{width:50%}@media screen and (max-width:866px){.footer__top-sprite{margin-top:20px;width:100%}
 }.footer__top-sprite-logo ul{display:flex;align-items:center;justify-content:flex-start;flex-wrap:wrap;list-style:none}
@@ -243,10 +252,12 @@ p.comment-form-author{margin:0;width:100%}.casino-review-post .author{margin-bot
 @media screen and (max-width:1127px){.seo-text__btn{margin-top:5%}}.seo-text__line{width:250px;height:2px;background-color:#f6f8fc}
 @media screen and (max-width:650px){.seo-text__line{display:none}}.seo-text__right{background-image:url(images/seo-text-bg.png);background-repeat:no-repeat;background-size:cover}
 .seo-text__right img{max-width:600px;width:100%;height:auto}@media screen and (max-width:1127px){.seo-text__right{margin-top:30px;text-align:center}
-}.seo-text.reverse{margin-top:5%;position:relative}.seo-text.reverse::before{content:"";display:block;position:absolute;top:0;bottom:0;right:0;left:0;background-image:url(images/bg_blog_2.png);background-repeat:no-repeat;background-size:cover;background-position:50% 0}
-@media screen and (max-width:1127px){.seo-text.reverse .seo-text__left{margin-top:5%}
-}.seo-text.reverse .seo-text__right{order:-1}.seo-text.reverse .seo-text__wrapper{justify-content:space-between}
-.seo-text.reverse .seo-text__line{order:1}.games-block{margin-top:10%}.games-block-top{display:flex;justify-content:space-between;align-items:center}
+}.seo-text.reverse{margin-top:5%;position:relative}@media screen and (max-width:1127px){.seo-text.reverse .seo-text__left{margin-top:5%}
+}.seo-text.reverse .seo-text__right{background-image:none;position:relative;order:-1}
+.seo-text.reverse .seo-text__right::before{content:"";display:block;position:absolute;background-image:url(images/bg_blog_2.png);background-repeat:no-repeat;z-index:-1;background-position:187% 45%;width:833px;height:510px;right:0;top:0}
+@media screen and (max-width:550px){.seo-text.reverse .seo-text__right::before{background-position:187% 100%}
+}.seo-text.reverse .seo-text__wrapper{justify-content:space-between}.seo-text.reverse .seo-text__line{order:1}
+.games-block{margin-top:10%}.games-block-top{display:flex;justify-content:space-between;align-items:center}
 @media(max-width:600px){.games-block-top{flex-direction:column;align-items:start}
 }.games-block-top .for-h{padding-top:7px}.games-block-btn{text-align:center}.games-block-btn .btn-primary{padding:9px 54px 12px 54px}
 .game-items-cat.games-block{margin-top:30px}.game-items-cat.games-block h1{margin-top:0}

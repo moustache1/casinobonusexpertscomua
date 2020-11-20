@@ -210,9 +210,21 @@
     border-radius: 8px;
     padding: 25px 20px;
     margin: 30px 0;
+    @media screen and (max-width: 1213px) {
+        width: 520px;
+    }
+    @media screen and (max-width: 1114px) {
+        width: 470px;
+    }
+    @media screen and (max-width: 900px) {
+        width: 400px;
+    }
     &:nth-child(even){
         margin-left: 30px;
-        @media screen and (max-width: 1213px) {
+        @media screen and (max-width: 1013px) {
+            margin-left: 10px;
+        }
+        @media screen and (max-width: 853px) {
             margin-left: 0;
         }
     }
@@ -260,17 +272,26 @@ p.comment-notes{
     display: none;
 }
 textarea#comment.comment-form {
-    width: 570px;
+    width: 670px;
     min-height: 159px;
     overflow: auto;
     outline: none;
     resize: none;
     border: 3px solid #DFE5EE;
-    padding: 13px 0 13px 20px;
+    padding: 13px 20px 13px 20px;
     border-radius: 8px;
     font-size: 12px;
     line-height: 16px;
     color: $monoDark;
+    @media screen and (max-width: 1213px) {
+        width: 570px;
+    }
+    @media screen and (max-width: 1114px) {
+        width: 470px;
+    }
+    @media screen and (max-width: 900px) {
+        width: 400px;
+    }
     @media screen and (max-width: 616px) {
         max-width: 270px;
     }
@@ -321,7 +342,6 @@ input#author.author, input#email{
     }
 }
 input#submit.submit{
-    margin-top: 10px;
     padding: 11px 55px 10px 55px;
     border-radius: 24px;
     border: 3px solid #796AE1;
@@ -374,4 +394,49 @@ p.comment-form-author{
     font-size: 12px;
     line-height: 16px;
     color: $monoDark;
+}
+.comment-form {
+    display: grid;
+    grid-template-columns: 470px 670px;
+    grid-template-rows: 44px 44px 44px 44px;
+    gap: 30px 30px;
+    grid-template-areas:
+      "comment-form-author comment-form-comment"
+      "comment-form-email comment-form-comment"
+      "comments-rating comment-formcomment"
+      "empty form-submit";
+  }
+  .comment-form-author { grid-area: comment-form-author; }
+  .comment-form-email { grid-area: comment-form-email; }
+  .comments-rating { grid-area: comments-rating; }
+  .comment-form-comment { grid-area: comment-form-comment; }
+  .form-submit { grid-area: form-submit; }
+  .empty { grid-area: empty; }
+
+
+@media screen and (max-width: 1213px) {
+    .comment-form {
+    display: grid;
+    grid-template-columns: 470px 470px;
+    grid-template-rows: 44px 44px 44px 44px;
+    gap: 30px 30px;
+    grid-template-areas:
+      "comment-form-author comment-form-comment"
+      "comment-form-email comment-form-comment"
+      "comments-rating comment-formcomment"
+      "empty form-submit";
+  }
+}
+@media screen and (max-width: 1013px) {
+    .comment-form {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+p.form-submit{
+    text-align: right;
+    @media screen and (max-width: 1013px) {
+        text-align: left;
+    }
 }

@@ -49,7 +49,7 @@
                                 'items_wrap' => '<ul class="%2$s">%3$s</ul>') );?>
                             </nav>   
                             <div class="header__nav-btn">
-                                <div class="btn-main" data-link="Z28tcGxheQ==">Лучший оффер</div>
+                                <div class="btn-main" data-link="cG0tcGxheQ==">Лучший оффер</div>
                             </div>
                         </div>
                     </div>

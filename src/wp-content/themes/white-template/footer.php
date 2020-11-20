@@ -30,7 +30,7 @@ Template Name: Footer
                                 Лучшие обзоры казино
                             </div>
                             <div class="footer__top-link">
-                                <a href="#">casinobonusexperts.com.ua</a>
+                                <a data-link="cG0tY2FzaW5v">casinobonusexperts.com.ua</a>
                             </div>
                         </div>
                     </div>

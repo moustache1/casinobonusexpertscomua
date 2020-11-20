@@ -24,7 +24,7 @@
                 <?php echo $iframe; ?>
 
                 <div class="post-wrapper-left-btn">
-                    <div class="btn-main" data-link="Z28tcGxheQ==">Играть на деньги</div>
+                    <div class="btn-main" data-link="cG0tY2FzaW5v">Играть на деньги</div>
                 </div>  
                 <!--/noindex-->
 

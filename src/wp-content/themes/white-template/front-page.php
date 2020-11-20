@@ -20,7 +20,7 @@
                 <div class="seo-text__btn">
                     <div class="seo-text__line"></div>
                     <div class="seo-text__button">
-                        <a class="btn-primary" data-link="Z28tcGxheQ==">Открыть весь текст</a>
+                        <a class="btn-primary" data-link="cG0tZ2FtZXM=">Открыть весь текст</a>
                     </div>  
                 </div>
             </div>
@@ -74,7 +74,7 @@
                 <div class="seo-text__btn">
                     <div class="seo-text__line"></div>
                     <div class="btn-primary">
-                        <a href="#">Открыть весь текст</a>
+                        <a data-link="cG0tY2FzaW5v">Открыть весь текст</a>
                     </div>
                 </div>
             </div>

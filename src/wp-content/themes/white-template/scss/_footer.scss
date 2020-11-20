@@ -33,7 +33,8 @@
         @include h5;
         font-family: 'Montserrat-Bold', sans-serif;
         color: $secNormal;
-        text-transform: uppercase;
+		text-transform: uppercase;
+		cursor: pointer;
     }
     &__top-sprite{
 		width: 50%;

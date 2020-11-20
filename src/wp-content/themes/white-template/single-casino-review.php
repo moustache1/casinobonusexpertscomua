@@ -39,7 +39,7 @@ Template Name: Casino Review Post
                     <img src="<?php bloginfo("template_url"); ?>/images/pmcasino-bg.png" alt="">
                 </div>
                 <div class="casino-review-btn">
-                    <div class="btn-main"><a href="#">Играть сейчас</a></div>
+                    <div class="btn-main"><a data-link="cG0tcGxheQ==">Играть сейчас</a></div>
                 </div>
             </div>
             <div class="casino-review-right">
@@ -64,30 +64,27 @@ Template Name: Casino Review Post
                 <div class="casino-review-info-title">
                     <span><?php echo $casinoinfo['casino-review-info-title']; ?></span>
                 </div>
+                            <?php foreach($casinoinfo['casino_review_info_item'] as $key => $item) {
+                                ?> 
+                                <div class="casino-review-info-about">
+                                    <div class="casino-review-info-parameter"><?php echo $item['casino_review_info_item_title']; ?></div>
+                                    <div class="casino-review-info-value"><?php 
+                                    
+                                    if ($item['casino_review_info_item_select'] == 'text'){
+                                        echo $item['casino_review_info_item_value'];
+                                    } 
+                                    if ($item['casino_review_info_item_select'] == 'check'){
+                                        if($item['casino_review_info_check']) { ?>
+                                            <img src="<?php bloginfo("template_url"); ?>/images/sprite/icon_check.svg" alt="">
+                                            <?php } else { ?>
+                                            <img src="<?php bloginfo("template_url"); ?>/images/sprite/icon_x.svg" alt="">
+                                        <?php }
+                                    }
+                                    ?></div>
 
-                <?php foreach($casinoinfo['casino_review_info_item'] as $key => $item) {
-                    // var_dump($item);?> 
-                    <div class="casino-review-info-about">
-                        <div class="casino-review-info-parameter"><?php echo $item['casino_review_info_item_title']; ?></div>
-                        <div class="casino-review-info-value"><?php 
-                        
-                        // var_dump($item['casino_review_info_item_select']);
-
-                        if ($item['casino_review_info_item_select'] == 'text'){
-                            echo $item['casino_review_info_item_value'];
-                        } 
-                        if ($item['casino_review_info_item_select'] == 'check'){
-                            if($item['casino_review_info_check']) { ?>
-                                <img src="<?php bloginfo("template_url"); ?>/images/sprite/icon_check.svg" alt="">
-                                <?php } else { ?>
-                                <img src="<?php bloginfo("template_url"); ?>/images/sprite/icon_x.svg" alt="">
-                            <?php }
-                        }
-                         ?></div>
-
-                    </div>
-                    <?php
-                }; ?>
+                                </div>
+                                <?php
+                            }; ?>
             </div>
             <!-- Блок номер 1 (о казино) -->
 
@@ -98,7 +95,7 @@ Template Name: Casino Review Post
                 </div>
                 <?php 
                     foreach($casinocash['casino_review_cash_image'] as $key => $image) {
-                        // var_dump($image);
+                        
                         ?>
                         <img class="info-img" src="<?php echo $image['casino_review_cash_image_item']['url'] ?>" alt="<?php echo $image['casino_review_cash_image_item']['alt'] ?>">
                         <?php
@@ -116,13 +113,11 @@ Template Name: Casino Review Post
                 </div>
 
                 <?php foreach($casinoparameters['casino_review_info_item_parameters'] as $key => $item) {
-                    // var_dump($item);?> 
+                    ?> 
                     <div class="casino-review-info-about">
                         <div class="casino-review-info-parameter"><?php echo $item['casino_review_info_item_title_parameters']; ?></div>
                         <div class="casino-review-info-value"><?php 
                         
-                        // var_dump($item['casino_review_info_item_select']);
-
                         if ($item['casino_review_info_item_select_parameters'] == 'text'){
                             echo $item['casino_review_info_item_value_parameters'];
                         } 
@@ -138,7 +133,6 @@ Template Name: Casino Review Post
                     <?php
                 }; ?>
 
-                <!-- <img src="<?php echo $casinoparameters['info_item_image']['url'] ?>" alt=""> -->
             </div>
             <!-- Блок номер 2 (о характеристиках) -->
 
@@ -149,7 +143,7 @@ Template Name: Casino Review Post
                 </div>
                 <?php 
                     foreach($casinoprovider['casino_review_provider_image'] as $key => $image) {
-                        // var_dump($image);
+                        
                         ?>
                         <img class="info-img" src="<?php echo $image['casino_review_provider_image_item']['url'] ?>" alt="<?php echo $image['casino_review_provider_image_item']['alt'] ?>">
                         <?php
@@ -194,7 +188,7 @@ Template Name: Casino Review Post
 
             <!-- Кнопка Играть сейчас -->
                 <div class="casino-review-btn-main">
-                    <div class="btn-main"><a href="#">Играть сейчас</a></div>
+                    <div class="btn-main"><a data-link="cG0tZ2FtZXM=">Играть сейчас</a></div>
                 </div>
              <!-- Кнопка Играть сейчас -->
         </div>
@@ -273,7 +267,6 @@ Template Name: Casino Review Post
             </p>'
         );
         $args = array(
-            '<div class="comment-wrapper1">',
             'comment_notes_after' => '',
             'label_submit' => 'Опубликовать отзыв',
             'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" class="comment-form" aria-required="true" placeholder="Ваш комментарий"></textarea></p>',
