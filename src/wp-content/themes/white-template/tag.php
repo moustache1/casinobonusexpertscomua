@@ -1,25 +1,42 @@
 <?php get_header(); ?>
 
+
+<div class="game-items-cat games-block container">
+
     <article id="sql-text" class="post-content clearfix">
-    <h1><?php
-        $cat_id = get_query_var('tag_id');
-        $cat_data = get_option("post_tag_$cat_id");
-        if (!empty($cat_data['h1_for_tag'])){
-            echo $cat_data['h1_for_tag'];
-        }
-        ?></h1><?php 
+    <?php if( function_exists('custom_breadcrumbs') ) custom_breadcrumbs(' > '); ?>
+    <h1><?php $cat_id = get_query_var('cat');
+        $cat_data = get_option("category_$cat_id");
+        if (!empty($cat_data['cat_h1'])) { echo $cat_data['cat_h1']; } ?></h1>
+        <div class="for-h"></div>
+        <?php 
         $term_description = term_description();
         if (!empty($term_description)) :
             printf('%s', $term_description);
         endif;?>
     </article>
-    <ul class="gamelist-wrapper kill-list clearfix"><?php
-        if (have_posts()): while (have_posts()): the_post(); ?><li class="game-item"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php
-             if (has_post_thumbnail()) {
-                $default_attr = array('title' => $post->post_title);
-                echo get_the_post_thumbnail(null, 'full', $default_attr);
-            } 
-            ?><span class="game-title"><?php the_title(); ?></span></a></li>
-        <?php endwhile; endif;
-    ?></ul>
+        
+    <div class="games-block">
+            <div class="games-wrapper">
+
+            <?php 
+                $posts = new WP_Query( array(
+                    'posts_per_page' => 12,
+                    'cat' => '5',
+                    'orderby' => 'date'
+                ));
+                
+                if ($posts) : while ($posts->have_posts()) : $posts->the_post(); ?>
+
+                <?php  get_template_part('template_parts/game-items');?>
+        
+                <?php endwhile; endif; ?>
+    </div>
+        
+            <div class="btn-primary"><span>Показать больше игр</span></div>
+    </div>
+
+
+</div>
+
 <?php get_footer(); ?>

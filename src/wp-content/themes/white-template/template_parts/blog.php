@@ -1,6 +1,6 @@
 <?php 
 $posts = get_posts( array(
-    'numberposts' => 5,
+    'numberposts' => 21,
     'category_name'    => 'blog',
     'orderby'     => 'date',
     'order'       => 'DESC',

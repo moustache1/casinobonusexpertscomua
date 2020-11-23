@@ -10,9 +10,7 @@
                     $posts = $horizontal_casino;
                     if ($posts) : foreach ($posts as $key => $post) : setup_postdata($post); ?>
 
-                    <?php //var_dump($posts); ?>
-                    
-                        <?php get_template_part( 'template_parts/affiliate-item-horizontal', null, $key ); ?>
+                    <?php get_template_part( 'template_parts/affiliate-item-horizontal', null, $key ); ?>
                 
                     <?php wp_reset_postdata(); ?>
                     <?php endforeach; endif; ?>

@@ -215,7 +215,7 @@ class Breadcrumbs {
 
 	// Локализация
 	static $l10n = array(
-		'home'       => 'casinobonusexperts.com.ua',
+		'home'       => 'onlineslotsclub.com.ua',
 		'paged'      => 'Страница %d',
 		'_404'       => 'Ошибка 404',
 		'search'     => 'Результаты поиска по запросу - <b>%s</b>',

@@ -63,7 +63,6 @@
     </div>
 </div>
 
-
 <?php get_template_part( 'template_parts/affiliate-horizontal-block', null, $horizontal_casino ); ?>
 
 <div class="seo-text reverse">

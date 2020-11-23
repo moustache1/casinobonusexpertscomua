@@ -202,7 +202,7 @@ p.comment-form-author{margin:0;width:100%}.casino-review-post .author{margin-bot
 .footer__top-menu ul li a{position:relative;display:inline-block;font-size:14px;line-height:18px;color:#192744;font-family:Montserrat-Bold,sans-serif;text-decoration:none;text-align:center;padding:10px;z-index:0;transition:all .3s}
 .footer__top-menu ul li a:hover{color:#796ae1}.footer__top-menu ul li span{color:#192744;position:relative;display:inline-block;font-size:14px;line-height:21px;font-family:Montserrat-Bold,sans-serif;text-decoration:none;text-align:center;padding:10px;z-index:0}
 .footer__bottom-menu{padding:30px 30px 0}.footer__bottom-menu>ul{display:flex;align-items:flex-start;justify-content:center;flex-wrap:wrap;list-style:none}
-.footer__bottom-menu>ul>li{width:100%;max-width:18%;min-width:205px;margin:0 19px;padding-bottom:25px}
+.footer__bottom-menu>ul>li{width:100%;max-width:18%;min-width:220px;margin:0 19px;padding-bottom:25px}
 .footer__bottom-menu>ul>li .current_page_item a{color:#192744}.footer__bottom-menu>ul>li .current_page_item a:hover{color:#796ae1;cursor:pointer}
 .footer__bottom-menu>ul>li h5{color:#192744;text-align:center}.footer__bottom-menu>ul>li h5:hover{color:#796ae1;cursor:pointer}
 @media screen and (max-width:992px){.footer__bottom-menu>ul>li h5{text-align:center}
@@ -220,7 +220,8 @@ p.comment-form-author{margin:0;width:100%}.casino-review-post .author{margin-bot
 .affiliate__vertical{width:270px;height:440px;background:#fff;box-shadow:0 4px 4px 4px rgba(41,13,98,.15);border-radius:8px;display:flex;flex-direction:column;align-items:center;text-align:center;border-top:0}
 .affiliate__vertical:hover{border:3px solid #796ae1;border-top:0;cursor:pointer}.affiliate__vertical .slick-slide{height:440px;width:270px}
 .affiliate__vertical .slick-slide .slick-current .slick-active{height:440px;width:270px}
-.affiliate__vertical-img img{border-radius:8px}.affiliate__vertical-stars{font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:14px;line-height:18px;color:#796ae1}
+.affiliate__vertical-img img.lazy.loaded{border-radius:8px;width:270px;height:124px}
+.affiliate__vertical-stars{font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:14px;line-height:18px;color:#796ae1}
 .affiliate__vertical-rating{display:flex;justify-content:center;align-items:center;width:100%;margin-top:10px}
 .affiliate__vertical-mark{padding-top:4px;margin-left:10px;color:#796ae1;font-family:Montserrat-Bold,sans-serif;font-size:16px;font-weight:900}
 .affiliate__vertical-title{margin-top:20px;font-family:Montserrat-Bold,sans-serif;font-weight:900;font-size:24px;line-height:29px;font-weight:900;color:#192744}

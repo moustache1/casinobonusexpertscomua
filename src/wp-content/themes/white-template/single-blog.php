@@ -32,7 +32,7 @@
             <?php 
             $posts = get_posts( array(
                 'numberposts' => 4,
-                'category'    => 9,
+                'category'    => 21,
                 'orderby'     => 'rand',
                 'order'       => 'DESC',
               ));

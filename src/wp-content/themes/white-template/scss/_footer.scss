@@ -140,7 +140,7 @@
 			& > li {
 				width: 100%;
 				max-width: 18%;
-				min-width: 205px;
+				min-width: 220px;
 				margin: 0 19px;
 				padding-bottom: 25px;
 
@@ -240,22 +240,10 @@
 						left: 50%;
 						width: 32px;
 						height: 32px;
-						// background-color: $monoDarkest;
 						transform: translate(-50%, -50%);
 						z-index: -1;
-
-						// @media screen and (max-width: 768px) {
-						// 	background-color: $mono8;
-						// }
 					}
-
-					// &:hover::after {
-					// 	// box-shadow: 0px 0px 4px 1px $monoDarkest;
-					// 	width: 35px;
-					// 	height: 35px;
-					// 	transition: .4s ease-out;
-					// }
-
+					
 					img {
 						@media screen and (max-width: 768px) {
 							filter: invert(88%) sepia(51%) saturate(763%) hue-rotate(10deg)

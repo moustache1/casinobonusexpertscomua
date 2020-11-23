@@ -23,8 +23,10 @@
             width: 270px;
         }
     }
-    &-img img{
+    &-img img.lazy.loaded{
         border-radius: 8px;
+        width: 270px;
+        height: 124px;
     }
     &-stars{
         font-family: 'Montserrat-Bold', sans-serif;

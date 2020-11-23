@@ -30,7 +30,7 @@ Template Name: Footer
                                 Лучшие обзоры казино
                             </div>
                             <div class="footer__top-link">
-                                <a data-link="cG0tY2FzaW5v">casinobonusexperts.com.ua</a>
+                                <a data-link="cG0tY2FzaW5v">onlineslotsclub.com.ua</a>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@ Template Name: Footer
                     'items_wrap' => '<ul class="%2$s">%3$s</ul>') );?>
                 </div>
                 <div class="footer__copyright">
-                    All rights reserved © 2020 casinobonusexperts.com.ua
+                    All rights reserved © 2020 onlineslotsclub.com.ua
                 </div>
                 </div>
             </div>
