@@ -36,7 +36,8 @@ Template Name: Casino Review Post
                     </div>
                 </div>
                 <div class="casino-review-img">
-                    <img src="<?php bloginfo("template_url"); ?>/images/pmcasino-bg.png" alt="">
+                <?php $casinoparameter = get_field('casino_parameter'); ?>
+                    <img src="<?php echo $casinoparameter['casino_parameter_image']['url'] ?>" alt="<?php echo $casinoparameter['casino_parameter_image_alt']; ?>">
                 </div>
                 <div class="casino-review-btn">
                     <div class="btn-main"><a data-link="cG0tcGxheQ==">Играть сейчас</a></div>
