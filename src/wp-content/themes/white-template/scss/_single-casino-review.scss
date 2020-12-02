@@ -101,7 +101,6 @@
         & img.info-img{
             width: 74px;
             height: 46px;
-            object-fit: cover;
         }
         &-title{
             color: $monoDarkest;
@@ -439,4 +438,7 @@ p.form-submit{
     @media screen and (max-width: 1013px) {
         text-align: left;
     }
+}
+.comment-form-cookies-consent{
+    display: none;
 }

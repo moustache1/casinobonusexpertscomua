@@ -53,7 +53,7 @@ $faqItemArrowHeight: 6px;
 }    
 
 @mixin h4 {
-    @include fonts(24px, 29px, false, 900);
+    @include fonts(24px, 28px, false, 900);
     @media screen and (max-width: 768px) {
         @include fonts(16px, 150%);
     }

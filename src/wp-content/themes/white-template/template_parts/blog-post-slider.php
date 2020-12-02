@@ -1,8 +1,9 @@
 <div class="blog-post-slider">
 <?php 
 $posts = get_posts( array(
-    'numberposts' => 6,
+    'numberposts' => 5,
     'category'    => 22,
+    // 'category'    => 10,
     'orderby'     => 'rand',
     'order'       => 'DESC',
   ));

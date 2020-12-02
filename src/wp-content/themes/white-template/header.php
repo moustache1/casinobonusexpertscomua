@@ -37,7 +37,7 @@
                 <div class="header__nav">
                     <div class="header__logo">
                         <a href="/" class="logo" title="Online PM Casino">
-                            <img src="<?php bloginfo("template_url"); ?>/images/logo.png" alt="PM Casino">
+                            <img src="<?php bloginfo("template_url"); ?>/images/logo.svg" alt="PM Casino">
                         </a>
                     </div>
                     <div class="header__nav-wrapper">

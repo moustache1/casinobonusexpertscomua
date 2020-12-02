@@ -1,50 +1,60 @@
-
+.full-404{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 .bg-404{
+    margin-top: 80px;
     font-weight: 900;
-    font-size: 288px;
-    line-height: 351px;
+    font-size: 200px;
+    line-height: 200px;
     font-family: 'Montserrat-Bold', sans-serif;
-    color: $monoMiddle;
-    z-index: -1;
-    margin-left: 30%;
-    @media screen and (max-width: 720px) {
-        margin-left: 0;
-    }
+    color: #DFE5EE;
+    text-align: center;
     @media screen and (max-width: 520px) {
-        font-size: 150px;
-        line-height: 200px;
+        font-size: 130px;
+        line-height: 150px;
         text-align: center;
     }
 }
 .text-404{
-    z-index: 99;
-    margin-top: -15%;
-    margin-left: 41%;
-    max-width: 670px;
     width: 100%;
-    text-align: left;
-    @media screen and (max-width: 1176px) {
-        margin-left: 20%;
-    }
-    @media screen and (max-width: 852px) {
-        margin-left: 0;
-    }
-    @media screen and (max-width: 710px) {
-        text-align: center;
-    }
+    text-align: center;
     & span{
         font-family: 'Montserrat-Bold', sans-serif;
+        font-weight: 900;
         color: $secNormal;
-        @include h2;
+        font-size: 48px;
+        line-height: 48px;
+        text-align: center;
+        @media screen and (max-width: 520px) {
+            font-size: 24px;
+            line-height: 24px;
+        }
     }
     & p{
         margin-top: 30px;
         font-family: 'Montserrat-Regular', sans-serif;
-        color: $monoDarkest;
+        color: #101240;
         font-size: 14px;
         line-height: 18px;
     }
     & a{
         color: $secNormal;
+    }
+}
+.btn-primary a{
+    color: $secNormal;
+    &:hover{
+        color: #fff;
+    }
+}
+.btn-404{
+    margin: 50px 0;
+    @media screen and (max-width: 520px) {
+        margin: 30px 0;
+    }
+    & .btn-primary{
+        padding: 11px 49px 10px 49px;
     }
 }

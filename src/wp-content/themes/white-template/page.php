@@ -3,18 +3,19 @@
 
 <div class="game-items-cat games-block container">
 
-    <article id="sql-text" class="post-content clearfix">
     <?php if( function_exists('custom_breadcrumbs') ) custom_breadcrumbs(' > '); ?>
-    <h1><?php $cat_id = get_query_var('cat');
-        $cat_data = get_option("category_$cat_id");
-        if (!empty($cat_data['cat_h1'])) { echo $cat_data['cat_h1']; } ?></h1>
-        <div class="for-h"></div>
-        <?php 
-        $term_description = term_description();
-        if (!empty($term_description)) :
-            printf('%s', $term_description);
-        endif;?>
+
+    <article class="post-content" id="sql-text">
+        <h1><?php echo(get_post_meta($post->ID, 'h1', true)); ?></h1>
+        <?php if (have_posts()): while (have_posts()): the_post(); ?>
+        <?php the_content(); ?>
+        <?php endwhile; endif; ?>
     </article>
+
+    <div class="page-content">   
+        <div class="for-h"></div>
+        <div class="main-text"></div>
+    </div>
         
     <div class="games-block">
             <div class="games-wrapper">

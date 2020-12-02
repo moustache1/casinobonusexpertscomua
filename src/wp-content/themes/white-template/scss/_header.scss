@@ -32,6 +32,7 @@
             @media screen and (max-width: 999px) {
                 margin-right: 0;
                 margin-top: 15px;
+                min-width: 174px;
             }
             & a:hover{
                 color: $secNormal;
@@ -54,7 +55,8 @@
                 margin: 15px 0;
             }  
             @media screen and (max-width: 360px) {
-                padding: 9px 30px 12px 30px;
+                padding: 9px 32px 12px 33px;
+                margin-left: -35px;
             }  
         }
     } 

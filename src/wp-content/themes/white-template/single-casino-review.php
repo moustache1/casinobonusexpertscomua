@@ -40,7 +40,7 @@ Template Name: Casino Review Post
                     <img src="<?php echo $casinoparameter['casino_parameter_image']['url'] ?>" alt="<?php echo $casinoparameter['casino_parameter_image_alt']; ?>">
                 </div>
                 <div class="casino-review-btn">
-                    <div class="btn-main"><a data-link="cG0tcGxheQ==">Играть сейчас</a></div>
+                    <div class="btn-main"><a href="<?php echo $casinoparameter['affiliate_link']; ?>">Играть сейчас</a></div>
                 </div>
             </div>
             <div class="casino-review-right">
@@ -58,6 +58,7 @@ Template Name: Casino Review Post
             <?php $casinobonuses = get_field('casino_review_bonuses'); ?>
             <?php $casinocash = get_field('casino_review_cash'); ?>
             <?php $casinoprovider = get_field('casino_review_provider'); ?>
+            <?php $casinoparameter = get_field('casino_parameter'); ?>
 
         <div class="casino-review-top-info-block">
             <!-- Блок номер 1 (о казино) -->
@@ -189,7 +190,7 @@ Template Name: Casino Review Post
 
             <!-- Кнопка Играть сейчас -->
                 <div class="casino-review-btn-main">
-                    <div class="btn-main"><a data-link="cG0tZ2FtZXM=">Играть сейчас</a></div>
+                    <div class="btn-main"><a href="<?php echo $casinoparameter['affiliate_link']; ?>">Играть сейчас</a></div>
                 </div>
              <!-- Кнопка Играть сейчас -->
         </div>

@@ -1,15 +1,19 @@
-.custom_breadcrumbs span{
-    @include body-text;
-    color: $monoDarkest;
-    font-family: 'Montserrat-Bold', sans-serif;
-    &:hover{
-        color: $secNormal;
-        cursor: pointer;
-    }
-    &.kb_title{
+.custom_breadcrumbs {
+    margin-top: 30px;
+    & span{
+        @include body-text;
         color: $monoDarkest;
+        font-family: 'Montserrat-Bold', sans-serif;
+        &:hover{
+            color: $secNormal;
+            cursor: pointer;
+        }
+        &.kb_title{
+            color: $monoDarkest;
+        }
     }
 }
+
 .game-items-cat .games-block {
     margin-top: 0;
     & h2{

@@ -98,7 +98,15 @@ $('.faq').on('click', function (e) {
           }
         ]
       })
-
+  $('.content_toggle').click(function(){
+    $('.content_block').toggleClass('hide');	
+    if ($('.content_block').hasClass('hide')) {
+      $('.content_toggle').html('Открыть весь текст');
+    } else {
+      $('.content_toggle').html('Скрыть');
+    }		
+    return false;
+  });
 })
 
 

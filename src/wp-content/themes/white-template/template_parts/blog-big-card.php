@@ -1,8 +1,10 @@
 <div class="main-blog">
 <?php $date_check = get_the_date('F j, Y'); ?>
-    <div class="main-blog-img">
-        <img src="<?php bloginfo("template_url"); ?>/images/pmcasino-bg.png" alt="PM Casino">
-    </div>
+    <a href="<?php the_permalink(); ?>">
+        <div class="main-blog-img">
+            <img src="<?php bloginfo("template_url"); ?>/images/pmcasino-bg.png" alt="PM Casino">
+        </div>
+    </a>
     <div class="main-blog-wrapper">
         <div class="main-blog-info">
             <div class="main-blog-date">

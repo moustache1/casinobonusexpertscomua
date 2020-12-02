@@ -30,10 +30,10 @@ $cat_id = $cat['0']->term_id;
         
         <div class="game-card-name"><?php the_title(); ?> </div>  
 
-        <div class="game-card-overlay b-r">
-          <span data-link="cG0tc3BvcnQ=" class="play-btn"><span>Играть на деньги</span></span>
-          <a class="demo-btn" href="<?php the_permalink(); ?>">демо игра</a>
-        </div>  
+        <a href="<?php the_permalink(); ?>" class="game-card-overlay b-r">
+          <span data-link="cG0=" class="play-btn"><span>Играть на деньги</span></span>
+          <div class="demo-btn">демо игра</div>
+        </a> 
 
       </div>
 

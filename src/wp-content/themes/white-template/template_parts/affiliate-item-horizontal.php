@@ -4,7 +4,9 @@
         <?php echo $args + 1 ?>
     </div>
     <div class="affiliate__horizontal-img">
-        <img src="<?php echo $casinoparameter['casino_parameter_image']['url'] ?>" alt="<?php echo $casinoparameter['casino_parameter_image']['alt']; ?>">
+        <a href="<?php the_permalink(); ?>">
+            <img src="<?php echo $casinoparameter['casino_parameter_image']['url'] ?>" alt="<?php echo $casinoparameter['casino_parameter_image']['alt']; ?>">
+        </a>
     </div>
     <div class="affiliate__horizontal-about">
         <div class="affiliate__horizontal-rating">
@@ -40,7 +42,7 @@
             <span><?php echo $casinoparameter['casino_parameter_name']; ?></span>
         </div>
         <div class="affiliate__horizontal-read">
-            <a href="<?php the_permalink(); ?>">Read review ></a>
+            <a href="<?php the_permalink(); ?>">Читать обзор ></a>
         </div>
     </div>
     <div class="affiliate__horizontal-detail">
@@ -52,7 +54,9 @@
         </div>
     </div>
     <div class="affiliate__horizontal-btn">
-        <div class="btn-main" data-link="cG0=">Select a payout speed</div>
+        <a class="btn-main" href="<?php echo $casinoparameter['affiliate_link']; ?>">
+            Начать играть сейчас
+        </a>
     </div>
 
 </div>

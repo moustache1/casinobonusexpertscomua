@@ -23,7 +23,7 @@ Template Name: Footer
                 <div class="footer__top">
                     <div class="footer__top-wrapper">
                         <div class="footer__top-logo">
-                            <img src="<?php bloginfo("template_url"); ?>/images/footer-logo.png" alt="">
+                            <img src="<?php bloginfo("template_url"); ?>/images/footer-logo.svg" alt="">
                         </div>
                         <div class="footer__top-descr">
                             <div class="footer__top-title">
@@ -36,15 +36,21 @@ Template Name: Footer
                     </div>
                     <div class="footer__top-sprite">
                         <div class="footer__top-sprite-logo">
-                            <ul>
-                                <li><img src="<?php bloginfo("template_url"); ?>/images/sprite/ecogra.png" alt=""></li>
-                                <li><img src="<?php bloginfo("template_url"); ?>/images/sprite/gamcare.png" alt=""></li>
-                                <li><img src="<?php bloginfo("template_url"); ?>/images/sprite/security-lock.png" alt=""></li>
-                                <li><img src="<?php bloginfo("template_url"); ?>/images/sprite/18+.png" alt=""></li>
-                                <li><img src="<?php bloginfo("template_url"); ?>/images/sprite/norton.png" alt=""></li>
-                                <li><img src="<?php bloginfo("template_url"); ?>/images/sprite/curacao-egaming.png" alt=""></li>
-                                <li><img src="<?php bloginfo("template_url"); ?>/images/sprite/begambleaware.png" alt=""></li>
-                            </ul>
+                            <div class="logo-top">
+                                <ul>
+                                    <li><img class="ecogra" src="<?php bloginfo("template_url"); ?>/images/sprite/ecogra.png" alt=""></li>
+                                    <li><img class="gamcare" src="<?php bloginfo("template_url"); ?>/images/sprite/gamcare.png" alt=""></li>
+                                    <li><img class="security-lock" src="<?php bloginfo("template_url"); ?>/images/sprite/security-lock.png" alt=""></li>
+                                    <li><img class="img18" src="<?php bloginfo("template_url"); ?>/images/sprite/18+.png" alt=""></li>
+                                </ul>
+                            </div>
+                            <div class="logo-bottom">
+                                <ul>
+                                    <li><img class="norton" src="<?php bloginfo("template_url"); ?>/images/sprite/norton.png" alt=""></li>
+                                    <li><img class="curacao-egaming" src="<?php bloginfo("template_url"); ?>/images/sprite/curacao-egaming.png" alt=""></li>
+                                    <li><img class="begambleaware" src="<?php bloginfo("template_url"); ?>/images/sprite/begambleaware.png" alt=""></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -70,13 +76,10 @@ Template Name: Footer
                     </div>
                 </div>
                 <div class="footer__social">
-                    <?php wp_nav_menu( array(
-                    'menu' => 'Social Menu',
-                    'menu_class' => 'footer-nav-list kill-list',
-                    'container' => '',
-                    'fallback_cb' => '__return_empty_string',
-                    'items_wrap' => '<ul class="%2$s">%3$s</ul>') );?>
+                    <img src="<?php bloginfo("template_url"); ?>/images/twitter.svg" alt="">
+                    <img src="<?php bloginfo("template_url"); ?>/images/facebook.svg" alt="">
                 </div>
+               
                 <div class="footer__copyright">
                     All rights reserved © 2020 onlineslotsclub.com.ua
                 </div>

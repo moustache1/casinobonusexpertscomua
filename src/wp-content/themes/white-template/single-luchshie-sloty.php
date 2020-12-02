@@ -22,11 +22,12 @@
                 <!--noindex-->
 
                 <?php echo $iframe; ?>
-
+                
+                <!--/noindex-->
                 <div class="post-wrapper-left-btn">
                     <div class="btn-main" data-link="cG0tY2FzaW5v">Играть на деньги</div>
                 </div>  
-                <!--/noindex-->
+               
 
                 <div class="main-text"></div>
                 <?php get_template_part( 'template_parts/content-scroll' ); ?>
@@ -62,7 +63,6 @@
                     <?php
                 }; ?>
 
-                <img src="<?php echo $gameinfo['info_item_image']['url'] ?>" alt="">
             </div>
 
             <?php  get_template_part('template_parts/game-items-4vertical');?> 

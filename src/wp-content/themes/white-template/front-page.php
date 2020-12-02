@@ -12,24 +12,18 @@
 
 <?php get_template_part( 'template_parts/affiliate-vertical-block', null, $vertical_casino ); ?>
 
-<div class="seo-text">
-    <div class="container">
-        <div class="seo-text__wrapper">
-            <div class="seo-text__left">
-                <?php the_field('text_block_1') ?>
-                <div class="seo-text__btn">
-                    <div class="seo-text__line"></div>
-                    <div class="seo-text__button">
-                        <a class="btn-primary" data-link="cG0tZ2FtZXM=">Открыть весь текст</a>
-                    </div>  
-                </div>
-            </div>
-            <div class="seo-text__right">
-                <img src="<?php bloginfo("template_url"); ?>/images/seo-text-ruletka.png" alt="">
-            </div>
-        </div>
+
+
+<div class="scroll-content container">
+    <div class="scroll-content-img">
+        <img src="<?php bloginfo("template_url"); ?>/images/chips_dice.jpg" alt="">
+    </div>
+    <div class="scroll-content-main">
+        <div class="for-h"></div>
+        <div class="main-text main-text_scroll"></div>
     </div>
 </div>
+
 <?php if($front_games) {
     ?>
     <div class="games-block container">
@@ -52,14 +46,19 @@
     <?php
 } ?>
 
-
-<div class="scroll-content container">
-    <div class="scroll-content-img">
-        <img src="<?php bloginfo("template_url"); ?>/images/chips-dice.png" alt="">
-    </div>
-    <div class="scroll-content-main">
-        <div class="for-h"></div>
-        <div class="main-text main-text_scroll"></div>
+<div class="seo-text">
+    <div class="container">
+        <div class="seo-text__wrapper">
+            <div class="seo-text__left">
+                <div class="content_block hide">
+                    <?php the_field('text_block_1') ?>
+                </div>
+                <a class="content_toggle">Открыть весь текст</a>
+            </div>
+            <div class="seo-text__right">
+                <img src="<?php bloginfo("template_url"); ?>/images/seo-text-ruletka.png" alt="">
+            </div>
+        </div>
     </div>
 </div>
 
@@ -69,13 +68,10 @@
     <div class="container">
         <div class="seo-text__wrapper">
             <div class="seo-text__left">
-                <?php the_field('text_block_2') ?>
-                <div class="seo-text__btn">
-                    <div class="seo-text__line"></div>
-                    <div class="btn-primary">
-                        <a data-link="cG0tY2FzaW5v">Открыть весь текст</a>
-                    </div>
+                <div class="content_block hide">
+                    <?php the_field('text_block_1') ?>
                 </div>
+                <a class="content_toggle">Открыть весь текст</a>
             </div>
             <div class="seo-text__right">
                 <img src="<?php bloginfo("template_url"); ?>/images/seo-text-card.png" alt="">

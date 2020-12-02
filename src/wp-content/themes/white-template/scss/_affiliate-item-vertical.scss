@@ -13,7 +13,6 @@
     &:hover{
         border: 3px solid $secNormal;
         border-top: none;
-        cursor: pointer;
     }
     & .slick-slide{
         height: 440px;
@@ -23,16 +22,17 @@
             width: 270px;
         }
     }
-    &-img img.lazy.loaded{
+    &-img img{
         border-radius: 8px;
-        width: 270px;
-        height: 124px;
+        width: 270px !important;
+        height: 124px !important;
+        cursor: pointer;
     }
     &-stars{
         font-family: 'Montserrat-Bold', sans-serif;
         font-weight: 900;
         font-size: 14px;
-        line-height: 18px;
+        line-height: 26px;
         color: $secNormal;
     }
     &-rating{
@@ -43,7 +43,6 @@
         margin-top: 10px;
     }
     &-mark{
-        padding-top: 4px;
         margin-left: 10px;
         color: $secNormal;
         font-family: 'Montserrat-Bold', sans-serif;
@@ -69,6 +68,7 @@
         font-family: 'Montserrat-Bold', sans-serif;
         font-weight: 900;
         @include h4;
+        height: 56px;
     }
     &-descr{
         color: $monoDarkest;
@@ -78,11 +78,11 @@
         margin-bottom: 18px;
         height: 42px;
         & span{
-            color: $secNormal;
+            color: $monoDarkest;
         }
     }
     &-read{
-        margin-top: 30px;
+        margin-top: 15px;
         color: $secNormal;
         font-family: 'Montserrat-Bold', sans-serif;
         font-weight: 900;
@@ -90,6 +90,7 @@
         padding-bottom: 5px;
         &:hover{
             color: $secHover;
+            cursor: pointer;
         }
     }
 }
